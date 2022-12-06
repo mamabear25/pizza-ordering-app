@@ -2,7 +2,6 @@ import styles from '../styles/PizzaCard.module.css';
 import Image from "next/image";
 import Link from "next/link";
 
-
 const PizzaCard = ({ pizza }) => {
     return (
         <div className={styles.container}>
@@ -13,7 +12,7 @@ const PizzaCard = ({ pizza }) => {
             <span className={styles.price}>&#8358;{pizza.prices[0]}</span>
             <p className={styles.desc}>{pizza.desc}</p>
         </div>
-    )
+    );
 };
 
-export default PizzaCard
+export default PizzaCard;

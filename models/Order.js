@@ -4,12 +4,12 @@ const OrderSchema = new mongoose.Schema({
     customer:{
         type: String,
         required: true,
-        maxLength: 40,
+        maxLength: 60,
     },
     address:{
         type: String,
         required: true,
-        maxLength: 100,
+        maxLength: 200,
     },
     total:{
         type: Number,
@@ -26,4 +26,4 @@ const OrderSchema = new mongoose.Schema({
 
 },{timestamps: true})
 
-export default mongoose.model("Order", OrderSchema);
+export default mongoose.models.Order || mongoose.model("Order", OrderSchema);

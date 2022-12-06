@@ -7,7 +7,7 @@ const Featured = () => {
     const images = [
         "/img/test2.png",
         "/img/test1.png",
-        "/img/test.png",
+        "/img/featured.png",
     ];
 
     const handleArrow = (direction) => {
