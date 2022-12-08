@@ -5,8 +5,8 @@ import { useState } from "react";
 const Featured = () => {
     const [index, setIndex] = useState(0)
     const images = [
-        "/img/test2.png",
-        "/img/test1.png",
+        "/img/testfeat.png",
+        "/img/testfeat3.png",
         "/img/featured.png",
     ];
 
@@ -36,7 +36,7 @@ const Featured = () => {
                 <Image src={"/img/lefticon.png"} alt="" layout="fill" objectFit="contain"/>
             </div>
         </div>
-    );
+    ); 
 };
 
 export default Featured;

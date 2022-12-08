@@ -5,8 +5,8 @@ import { useState } from "react";
 import { useDispatch } from "react-redux";
 import {addProduct} from "../../redux/cartSlice";
 
-const Product = ({ pizza }) => {
-    const [price, setPrice] = useState(pizza.prices[0]);
+const Burger = ({ burger }) => {
+    const [price, setPrice] = useState(burger.prices[0]);
     const [size, setSize] = useState(0);
     const [quantity, setQuantity] = useState(1);
     const [extras, setExtras] = useState([]);
@@ -17,7 +17,7 @@ const Product = ({ pizza }) => {
     };
 
     const handleSize = (sizeIndex) => {
-        const diff = pizza.prices[sizeIndex] - pizza.prices[size];
+        const diff = burger.prices[sizeIndex] - burger.prices[size];
         setSize(sizeIndex);
         changePrice(diff);
     };
@@ -35,38 +35,38 @@ const Product = ({ pizza }) => {
     };
 
     const handleClick = () => {
-        dispatch(addProduct({...pizza, extras, price, quantity}));
+        dispatch(addProduct({...burger, extras, price, quantity}));
     };
 
     return (
         <div className={styles.container}>
             <div className={styles.left}>
                 <div className={styles.imgContainer}>
-                    <Image src={pizza.img} alt="" objectFit="contain" layout="fill" />
+                    <Image src={burger.img} alt="" objectFit="contain" layout="fill" />
                 </div>
             </div>
             <div className={styles.right}>
-                <h1 className={styles.title}>{pizza.title}</h1>
+                <h1 className={styles.title}>{burger.title}</h1>
                 <span className={styles.price}>&#8358;{price}</span>
-                <p className={styles.desc}>{pizza.desc}</p>
+                <p className={styles.desc}>{burger.desc}</p>
                 <h3 className={styles.choose}>Choose desired size</h3>
                 <div className={styles.sizes}>
                     <div className={styles.size} onClick={() =>handleSize(0)}>
                         <Image src="/img/size.png" layout="fill" alt="" />
-                        <span className={styles.number}>Small</span>
+                        <span className={styles.number}>Regular</span>
                     </div>
                     <div className={styles.size} onClick={() =>handleSize(1)}>
                         <Image src="/img/size.png" layout="fill" alt="" />
-                        <span className={styles.number}>Medium</span>
+                        <span className={styles.number}>Double Decker</span>
                     </div>
                     <div className={styles.size} onClick={() =>handleSize(2)}>
                         <Image src="/img/size.png" layout="fill" alt="" />
-                        <span className={styles.number}>Large</span>
+                        <span className={styles.number}>Triple Decker</span>
                     </div>
                 </div>
                 <h3 className={styles.choose}>What topping(s) would you like?</h3>
                 <div className={styles.toppings}>
-                    {pizza.extraOptions.map((options) => (
+                    {burger.extraOptions.map((options) => (
                     <div className={styles.options} key={options._id}>
                         <input 
                         type="checkbox" 
@@ -96,12 +96,12 @@ const Product = ({ pizza }) => {
 };
 
 export const getServerSideProps = async ({ params }) => {
-    const res = await axios.get(`http://localhost:3000/api/products/${params.id}`);
+    const res = await axios.get(`http://localhost:3000/api/burgers/${params.id}`);
     return{
       props:{
-        pizza: res.data,
+        burger: res.data,
       },
     };
 };
 
-export default Product;
+export default Burger;

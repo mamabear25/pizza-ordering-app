@@ -1,7 +1,21 @@
 import styles from "../styles/PizzaList.module.css";
 import PizzaCard from "./PizzaCard";
+import {useState, useEffect} from "react"
+import axios from "axios";
 
-const PizzaList = ({ pizzaList }) => {
+const PizzaList = () => {
+    const [pizzaList, setPizzaList] = useState([]);
+
+    const getPizzaList = async () => {
+    const res = await axios.get("http://localhost:3000/api/products");
+
+    setPizzaList(res.data);
+    };
+
+    useEffect(() => {
+        getPizzaList();
+    }, []);
+
     return (
         <div className={styles.container}>
             <h1 className={styles.title}>techMomma's Pizza</h1>

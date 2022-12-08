@@ -30,6 +30,35 @@
     position: relative;
 }
 
+.low{
+    position: absolute;
+    bottom: 8px;
+    left: 160px;
+    font-size: 30px;
+    color: white;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+};
+
+.topleft {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 8px;
+    left: 16px;
+}
+
+.bottomright {
+    position: absolute;
+    bottom: 8px;
+    right: 16px;
+}
+
+.topright {
+    position: absolute;
+    top: 8px;
+    right: 16px;
+}
+
 @media screen and (max-width:480px) {
     .container{
         height: 50vh;

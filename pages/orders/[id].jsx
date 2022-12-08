@@ -43,7 +43,7 @@ const Order = ({ order }) => {
                         <Image src="/img/atm.png"  width={30} height={30} alt="" />
                         <span>Payment</span>
                         <div className={styles.checked}>
-                            <Image className={styles.checkIcon} src="/img/paid.png"  width={30} height={30} alt="" />
+                            <Image className={styles.checkIcon} src="/img/checked.png"  width={30} height={30} alt="" />
                         </div>
                     </div>
                     <div className={statusClass(1)}>

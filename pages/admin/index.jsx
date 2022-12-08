@@ -1,17 +1,49 @@
 import styles from "../../styles/Admin.module.css";
 import Image from "next/image";
 import axios from "axios";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
-const Index = ({ orders, products }) => {
-    const [pizzaList, setPizzaList] = useState(products);
+const Index = ({ orders }) => {
+    const [productList, setProductList] = useState([]);
+    const [promoList, setPromoList] = useState([]);
+    const [burgerList, setBurgerList] = useState([]);
     const [orderList, setOrderList] = useState(orders);
     const status = ["preparing", "enroute", "delivered"]
+
+    const getproductList = async () => {
+        const res = await axios.get("http://localhost:3000/api/products");
+    
+        setProductList(res.data);
+    };
+    
+    useEffect(() => {
+        getproductList();
+    }, []);
+
+    const getpromoList = async () => {
+        const res = await axios.get("http://localhost:3000/api/promos");
+    
+        setPromoList(res.data);
+    };
+    
+    useEffect(() => {
+        getpromoList();
+    }, []);
+
+    const getburgerList = async () => {
+        const res = await axios.get("http://localhost:3000/api/burgers");
+    
+        setBurgerList(res.data);
+    };
+    
+    useEffect(() => {
+        getburgerList();
+    }, []);
 
     const handleDelete = async (id) => {
         try{
             const res = await axios.delete("http://localhost:3000/api/products/" + id);
-            setPizzaList(pizzaList.filter((pizza) => pizza._id !== id));
+            setProductList(productList.filter((pizza) => pizza._id !== id));
         }catch (err) {
             console.log(err)
         }
@@ -19,8 +51,7 @@ const Index = ({ orders, products }) => {
 
     const handleStatus = async (id) => {
         // for each order, we're searching for the order_id which equals the id we want to update, this will return another array and we'll take just the first item
-        const item = orderList.filter((order) => order._id === id)[0]
-        
+        const item = orderList.filter((order) => order._id === id)[0];
         const currentStatus = item.status
         
         try{
@@ -51,7 +82,7 @@ const Index = ({ orders, products }) => {
                             <th>Action</th>
                         </tr>
                     </tbody>
-                    {pizzaList.map((product) => (
+                    {productList.map((product) => (
                     <tbody key={product._id}>
                         <tr className={styles.trTitle}>
                             <td>
@@ -67,7 +98,7 @@ const Index = ({ orders, products }) => {
                             <td>{product.title}</td>
                             <td>{product.prices[0]}</td>
                             <td>
-                                <button className={styles.button}>Edit</button>
+                                <button className={styles.button} onClick={()=>handleEdit(product._id)}>Edit</button>
                                 <button className={styles.button} onClick={()=>handleDelete(product._id)}>Delete</button>
                             </td>
                         </tr>
@@ -111,12 +142,16 @@ const Index = ({ orders, products }) => {
 
 export const getServerSideProps = async () => {
     const productRes = await axios.get("http://localhost:3000/api/products");
-    const orderRes = await axios.get("http://localhost:3000/api/orders")
+    const orderRes = await axios.get("http://localhost:3000/api/orders");
+    const promoRes = await axios.get("http://localhost:3000/api/promos");
+    const burgerRes = await axios.get("http://localhost:3000/api/burgers");
 
     return{
         props: {
             orders: orderRes.data,
             products: productRes.data,
+            promos: promoRes.data,
+            burgers: burgerRes.data,
         },
     };
 };
