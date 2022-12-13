@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,700&family=Josefin+Sans:wght@100;200;300;400&family=Lora:ital,wght@1,400;1,500;1,600&family=Playfair+Display:ital,wght@0,500;0,800;1,400&family=Varela&display=swap');
+
 .container{
     width: 22%;
     padding: 10px;
@@ -9,20 +11,27 @@
 }
 
 .title{
-    font-size: 18px;
+    font-family: 'Fraunces', serif;
+    font-size: 22px;
     font-weight: bold;
     color: #b43617;
 }
 
 .price{
+    font-family: 'Josefin Sans', sans-serif;
     font-size: 18px;
     font-weight: bold;
     color: rgb(82, 79, 79);
 }
 
 .desc{
-    text-align: center;
     color: rgb(80, 76, 76);
+    font-family: 'Playfair Display', serif;
+    font-size: 18px;
+}
+
+.wrapper{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
 @media screen and (max-width: 480px) {

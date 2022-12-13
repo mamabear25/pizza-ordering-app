@@ -2,12 +2,14 @@
     height: calc(100vh - 100px);
     background-color: #222;
     display: flex;
+    overflow: hidden;
 }
 
 .item{
     flex: 1;
     position: relative;
     display: flex;
+    top: 100px;
 }
 
 .item:last-child{
@@ -19,6 +21,8 @@
 .card{
     flex: 1;
     padding: 0px 20px;
+    color: #d1411e;
+    font-weight: bold;
 }
 
 .title{

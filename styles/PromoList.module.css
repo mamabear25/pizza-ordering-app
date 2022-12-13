@@ -1,14 +1,16 @@
 .container{
-    padding: 20px 10px;
+    padding: 10px 10px;
     display: flex;
     flex-direction: column;
     align-items: center;
+    background-color: rgb(18, 18, 18);
 }
 
 .desc{
     text-align: center;
-    font-size: 44px;
-    color: rgb(54, 53, 53);
+    font-size: 40px;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    color: rgb(220, 216, 216);
     width: 70%;
 }
 
@@ -17,7 +19,6 @@
     display: flex;
     align-items: center;
     justify-content: space-around;
-    flex-wrap: wrap;
 }
 
 @media screen and (max-width: 480px) {

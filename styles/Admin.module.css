@@ -10,7 +10,7 @@
 .table{
     width: 100%;
     border-spacing: 20px;
-    text-align: left;
+    text-align: center;
 }
 
 .button{
@@ -20,11 +20,18 @@
     cursor: pointer;
 }
 
-.button:first-child{
-    background-color: teal;
-    margin-right: 10px;
-}
-
 .button:last-child{
     background-color: red;
+    width: 60px;
+    height: 30px;
+    border-radius: 10px;
+    position: relative;
+    top: 20px
 }
+
+.align{
+    display: flex;
+    position: relative;
+    left: 20px;
+}
+

@@ -20,7 +20,7 @@ const PizzaList = () => {
         <div className={styles.container}>
             <h1 className={styles.title}>techMomma's Pizza</h1>
             <p className={styles.desc}>
-                lorem ipsum dolor sit amet conecteur auris sed dignissim ipsum
+                Here's a list of our finger licking Pizza
             </p>
             <div className={styles.wrapper}>
                 {pizzaList.map((pizza) => (

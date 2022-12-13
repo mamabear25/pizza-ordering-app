@@ -9,8 +9,13 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@auth0/nextjs-auth0": "^2.0.0",
+    "@fortawesome/fontawesome-free": "^6.2.1",
+    "@fortawesome/fontawesome-svg-core": "^6.2.1",
+    "@fortawesome/free-solid-svg-icons": "^6.2.1",
     "@paypal/react-paypal-js": "^7.8.2",
     "@reduxjs/toolkit": "^1.9.1",
+    "@serverless-jwt/next": "^0.2.1",
     "axios": "^1.2.0",
     "eslint": "8.28.0",
     "eslint-config-next": "13.0.5",
@@ -20,6 +25,9 @@
     "react-curved-text": "^1.0.0",
     "react-dom": "18.2.0",
     "react-redux": "^8.0.5",
-    "redux": "^4.2.0"
+    "react-toastify": "^9.1.1",
+    "reactstrap": "^9.1.5",
+    "redux": "^4.2.0",
+    "v8": "^0.1.0"
   }
 }

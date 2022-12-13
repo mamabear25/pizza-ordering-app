@@ -2,10 +2,12 @@ import styles from "../styles/Navbar.module.css";
 import Image from "next/image";
 import { useSelector } from "react-redux";
 import Link from "next/link";
-
+import { useUser } from '@auth0/nextjs-auth0/client';
 
 const Navbar = () => {
+    const { user, isLoading } = useUser();
     const quantity = useSelector((state) => state.cart.quantity);
+
     return (
         <div className={styles.container}>
             <div className={styles.item}>
@@ -20,23 +22,42 @@ const Navbar = () => {
             <div className={styles.item}>
                 <ul className={styles.list}>
                     <Link href="/" passHref>
-                        <li className={styles.listItem}>HomePage</li>
+                        <li className={styles.listItem}>Home</li>
                     </Link>
-                    <Link href="/pizzas" passHref>
-                        <li className={styles.listItem}>Pizzas</li>
+                    <Link href="/menu" passHref>
+                        <li className={styles.listItem}>Menu</li>
                     </Link>
-                    <li className={styles.listItem}>Menu</li>
                     <Image src="/img/logo.png" alt="" width="150" height="150"/>
-                    <li className={styles.listItem}>Events</li>
-                    <Link href="/burgers" passHref>
-                        <li className={styles.listItem}>Burgers</li>
-                    </Link>
+                    <li className={styles.listItem}>Contact</li>
+                    {user && (
+                    <>
                     <Link href="/promos" passHref>
                         <li className={styles.listItem}>Promos</li>
                     </Link>
                     <Link href="/admin" passHref>
                         <li className={styles.listItem}>Admin</li>
                     </Link>
+                    </>
+                    )}
+                    {!isLoading && !user && (
+                    <Link href="/api/auth/login">
+                        <li className={styles.listItem}>Login</li>
+                    </Link>
+                    )}
+                    <br />
+                    {user && (
+                    <>
+                    <Link href="/profile" icon="user" >
+                        <li className={styles.listItem}>Profile </li>
+                    </Link>
+                    <Link
+                        href="/api/auth/logout"
+                        className="btn btn-link p-0"
+                        icon="power-off">
+                        <li className={styles.listItem}>Log out</li>
+                    </Link>
+                    </>
+                    )}
                 </ul>
             </div>
             <Link href="/cart" passHref>
@@ -51,4 +72,6 @@ const Navbar = () => {
     );
 };
 
-export default Navbar
+export default Navbar;
+
+

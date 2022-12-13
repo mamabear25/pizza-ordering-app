@@ -104,6 +104,7 @@ const Cart = () => {
                         <tr className={styles.trTitle}>
                             <th>Product</th>
                             <th>Name</th>
+                            <th>Size</th>
                             <th>Toppings</th>
                             <th>Price</th>
                             <th>Quantity</th>
@@ -124,6 +125,14 @@ const Cart = () => {
                             </td>
                             <td>
                                 <span className={styles.name}>{product.title}</span>
+                            </td>
+                            <td>
+                                <span className={styles.name}>{product.size === 0
+                                ? "small"
+                                : product.size === 1
+                                ? "medium"
+                                : "large"}
+                                </span>
                             </td>
                             <td>
                                 <span className={styles.extras}>

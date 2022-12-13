@@ -18,9 +18,8 @@ const PromoList = () => {
 
     return (
         <div className={styles.container}>
-            <h1 className={styles.title}>DEALS</h1>
             <p className={styles.desc}>
-                lorem ipsum dolor sit amet conecteur auris sed dignissim ipsum
+                HOT DEALS!!!
             </p>
             <div className={styles.wrapper}>
                 {promoList.map((promo) => (

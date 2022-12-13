@@ -1,11 +1,11 @@
 import styles from "../styles/Add.module.css";
 
-const AddButton = ({ setClose }) => {
+const EditPromoButton = ({ setClose }) => {
   return (
     <div onClick={() => setClose(false)} className={styles.mainAddButton}>
-      Add New Pizza
+      Edit
     </div>
   );
 };
 
-export default AddButton;
+export default EditPromoButton;

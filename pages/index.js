@@ -5,8 +5,8 @@ import styles from '../styles/Home.module.css';
 import PromoList from "../components/PromoList";
 import Featured from '../components/Featured';
 import { useState } from "react";
-import AddButton from "../components/AddButton";
-import Add from "../components/Add";
+import AddPromoButton from "../components/AddPromoButton";
+import AddPromo from "../components/AddPromo";
 
 export default function Home({ promoList }) {
   const [close, setClose] = useState(true);
@@ -15,12 +15,12 @@ export default function Home({ promoList }) {
       <Head>
         <title>Best Pizza Place in Lagos</title>
         <meta name="description" content="Best pizza shop in Lagos" />
-        <link rel="icon" href="/favicon.ico" />
+        <link rel="icon" href="/img/logo.png" />
       </Head>
       <Featured />
-      {<AddButton setClose={setClose} />}
+      {<AddPromoButton setClose={setClose}/>}
+      {!close && <AddPromo setClose={setClose} />}
       <PromoList promoList={promoList} />
-      {!close && <Add setClose={setClose} />}
     </div>
   )
 }
@@ -34,5 +34,3 @@ export const getServerSideProps = async () => {
   };
 };
 
-
-// /api/products

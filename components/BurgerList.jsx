@@ -19,6 +19,7 @@ const BurgerList = () => {
     return (
         <div className={styles.container}>
             <h1 className={styles.title}>techMomma's Burger</h1>
+            <p>Everyone Loves our burger!</p>
             <p className={styles.desc}>
                 lorem ipsum dolor sit amet conecteur auris sed dignissim ipsum
             </p>

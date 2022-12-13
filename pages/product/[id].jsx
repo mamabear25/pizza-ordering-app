@@ -4,8 +4,12 @@ import axios from "axios"
 import { useState } from "react";
 import { useDispatch } from "react-redux";
 import {addProduct} from "../../redux/cartSlice";
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const Product = ({ pizza }) => {
+    const notify = () => toast("Added to Cart");
+
     const [price, setPrice] = useState(pizza.prices[0]);
     const [size, setSize] = useState(0);
     const [quantity, setQuantity] = useState(1);
