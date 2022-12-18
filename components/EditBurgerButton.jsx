@@ -1,8 +1,8 @@
 import styles from "../styles/Add.module.css";
 
-const EditBurgerButton = ({ setClose }) => {
+const EditBurgerButton = ({ setBurgerClose }) => {
   return (
-    <div onClick={() => setClose(false)} className={styles.mainAddButton}>
+    <div onClick={() => setBurgerClose(false)} className={styles.mainAddButton}>
       Edit
     </div>
   );

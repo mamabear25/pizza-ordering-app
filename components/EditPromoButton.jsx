@@ -1,8 +1,8 @@
 import styles from "../styles/Add.module.css";
 
-const EditPromoButton = ({ setClose }) => {
+const EditPromoButton = ({ setPromoClose }) => {
   return (
-    <div onClick={() => setClose(false)} className={styles.mainAddButton}>
+    <div onClick={() => setPromoClose(false)} className={styles.mainAddButton}>
       Edit
     </div>
   );

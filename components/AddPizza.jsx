@@ -2,7 +2,7 @@ import { useState } from "react";
 import styles from "../styles/Add.module.css";
 import axios from "axios";
 
-const AddPizza = ({ setClose }) => {
+const AddPizza = ({ setPizzaClose }) => {
     const [file, setFile] = useState(null);
     const [title, setTitle] = useState(null);
     const [desc, setDesc] = useState(null)
@@ -49,7 +49,7 @@ const AddPizza = ({ setClose }) => {
             };
 
             await axios.post("http://localhost:3000/api/products", newProduct);
-            setClose(true);
+            setPizzaClose(true);
         } catch (err) {
             console.log(err)
         }
@@ -58,7 +58,7 @@ const AddPizza = ({ setClose }) => {
     return(
         <div className={styles.container}>
             <div className={styles.wrapper}>
-                <span onClick={() => setClose(true)} className={styles.close}>
+                <span onClick={() => setPizzaClose(true)} className={styles.close}>
                     X
                 </span>
                 <h1>Add a new pizza</h1>

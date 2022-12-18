@@ -4,15 +4,14 @@ import styles from "../styles/Home.module.css";
 import { useState } from "react";
 import AddPizzaButton from "../components/AddPizzaButton";
 import AddPizza from "../components/AddPizza";
-import { withPageAuthRequired } from "@auth0/nextjs-auth0";
 
 export default function PizzaHome({ pizzaList }) {
-  const [close, setClose] = useState(true);
+  const [close, setPizzaClose] = useState(true);
   return (
     <div className={styles.container}>
-      {<AddPizzaButton setClose={setClose} />}
+      {<AddPizzaButton setPizzaClose={setPizzaClose} />}
       <PizzaList pizzaList={pizzaList} />
-      {!close && <AddPizza setClose={setClose} />}
+      {!close && <AddPizza setPizzaClose={setPizzaClose} />}
     </div>
   );
 }

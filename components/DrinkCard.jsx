@@ -10,7 +10,6 @@ const DrinkCard = ({ drink }) => {
             </Link>
             <h1 className={styles.title}>{drink.title}</h1>
             <span className={styles.price}>&#8358;{drink.price}</span>
-            <p className={styles.desc}>{drink.desc}</p>
         </div>
     );
 };

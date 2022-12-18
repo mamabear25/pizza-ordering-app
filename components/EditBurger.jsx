@@ -2,7 +2,7 @@ import { useState } from "react";
 import styles from "../styles/EditProduct.module.css";
 import axios from "axios";
 
-const EditBurger = ({ setClose }) => {
+const EditBurger = ({ setBurgerClose }) => {
     const [file, setFile] = useState(null);
     const [title, setTitle] = useState(null);
     const [desc, setDesc] = useState(null)
@@ -49,7 +49,7 @@ const EditBurger = ({ setClose }) => {
             };
 
             await axios.put(`http://localhost:3000/api/burger/${id}`, updatedProduct);
-            setClose(true);
+            setBurgerClose(true);
         } catch (err) {
             console.log(err)
         }
@@ -58,7 +58,7 @@ const EditBurger = ({ setClose }) => {
     return(
         <div className={styles.container}>
             <div className={styles.wrapper}>
-                <span onClick={() => setClose(true)} className={styles.close}>
+                <span onClick={() => setBurgerClose(true)} className={styles.close}>
                     X
                 </span>
                 <h1>Update Burger</h1>

@@ -11,20 +11,21 @@ import EditPromoButton from "../components/EditPromoButton";
 import EditPromo from "../components/EditPromo";
 import EditBurgerButton from "../components/EditBurgerButton";
 import EditBurger from "../components/EditBurger";
-
-
-
+import Link from "next/link";
 const AllProducts = () => {
-    const [close, setClose] = useState(true);
+    const [closePizza, setPizzaClose] = useState(true);
+    const [closeBurger, setBurgerClose] = useState(true);
+    const [closePromo, setPromoClose] = useState(true);
+    const [closeDrink, setDrinkClose] = useState(true);
     const { user, error, isLoading } = useUser();
     const [productList, setProductList] = useState([]);
     const [promoList, setPromoList] = useState([]);
     const [burgerList, setBurgerList] = useState([]);
     const [drinkList, setDrinkList] = useState([]);
-    const status = ["preparing", "enroute", "delivered"]
+    const [product, setProduct] = useState("")
 
     //  get products
-    const getproductList = async () => {
+    const getproductList = async (id) => {
         const res = await axios.get("http://localhost:3000/api/products");
     
         setProductList(res.data);
@@ -140,9 +141,9 @@ const AllProducts = () => {
                                 <td>{product.prices[0]}</td>
                                 <td>
                                     <div className={styles.align}>
-                                        {<EditPizzaButton setClose={setClose}/>}
+                                        {<EditPizzaButton setPizzaClose={setPizzaClose}/>}
                                         <button className={styles.button} onClick={()=>handlePizzaDelete(product._id)}>Delete</button>
-                                        {!close && <EditPizza setClose={setClose} />}
+                                        {!closePizza && <EditPizza setPizzaClose={setPizzaClose} />}
                                     </div>
                                 </td>
                         </tr>
@@ -178,9 +179,9 @@ const AllProducts = () => {
                                 <td>{burger.prices[0]}</td>
                                 <td>
                                     <div className={styles.align}>
-                                        {<EditBurgerButton setClose={setClose}/>}
+                                        {<EditBurgerButton setBurgerClose={setBurgerClose}/>}
                                         <button className={styles.button} onClick={()=>handleBurgerDelete(burger._id)}>Delete</button>
-                                        {!close && <EditBurger setClose={setClose} />}
+                                        {!closeBurger && <EditBurger setBurgerClose={setBurgerClose} />}
                                     </div>
                                 </td>
                             </tr>
@@ -214,9 +215,9 @@ const AllProducts = () => {
                                 <td>{promo.title}</td>
                                 <td>
                                     <div className={styles.align}>
-                                        {<EditPromoButton setClose={setClose}/>}
+                                        {<EditPromoButton setPromoClose={setPromoClose}/>}
                                         <button className={styles.button} onClick={()=>handlePromoDelete(promo._id)}>Delete</button>
-                                        {!close && <EditPromo setClose={setClose} />}
+                                        {!closePromo && <EditPromo setPromoClose={setPromoClose} />}
                                     </div>
                                 </td>
                             </tr>
@@ -252,9 +253,9 @@ const AllProducts = () => {
                                         <td>{drink.price}</td>
                                         <td>
                                             <div className={styles.align}>
-                                                {<EditDrinksButton setClose={setClose}/>}
+                                                {<EditDrinksButton setDrinkClose={setDrinkClose}/>}
                                                 <button className={styles.button} onClick={()=>handleDrinkDelete(drink._id)}>Delete</button>
-                                                {!close && <EditDrinks setClose={setClose} />}
+                                                {!closeDrink && <EditDrinks setDrinkClose={setDrinkClose} />}
                                             </div>
                                         </td>
                                     </tr>

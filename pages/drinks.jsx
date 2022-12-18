@@ -7,12 +7,12 @@ import AddDrink from "../components/AddDrink";
 
 
 export default function DrinkHome({ drinkList }) {
-  const [close, setClose] = useState(true);
+  const [closeDrink, setDrinkClose] = useState(true);
   return (
     <div className={styles.container}>
-      {<AddDrinkButton setClose={setClose} />}
+      {<AddDrinkButton setDrinkClose={setDrinkClose} />}
       <DrinkList drinkList={drinkList} />
-      {!close && <AddDrink setClose={setClose} />}
+      {!closeDrink && <AddDrink setDrinkClose={setDrinkClose} />}
     </div>
   );
 }

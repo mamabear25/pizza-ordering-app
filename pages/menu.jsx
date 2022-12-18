@@ -2,7 +2,7 @@ import styles from "../styles/Menu.module.css";
 import Image from "next/image";
 import Link from "next/link";
 
-export default function Home({ promoList }) {
+export default function Home() {
   return (
     <div className={styles.container}>
         <div className={styles.wrapper}>

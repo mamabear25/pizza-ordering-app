@@ -1,8 +1,8 @@
 import styles from "../styles/Add.module.css";
 
-const EditDrinksButton = ({ setClose }) => {
+const EditDrinksButton = ({ setDrinkClose }) => {
   return (
-    <div onClick={() => setClose(false)} className={styles.mainAddButton}>
+    <div onClick={() => setDrinkClose(false)} className={styles.mainAddButton}>
       Edit
     </div>
   );

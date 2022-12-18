@@ -1,14 +1,15 @@
-import { useState } from "react";
+import React, { useState } from "react";
 import styles from "../styles/EditProduct.module.css";
 import axios from "axios";
 
-const EditPizza = ({ setClose }) => {
+const EditPizza = ({ product, setPizzaClose }) => {
     const [file, setFile] = useState(null);
     const [title, setTitle] = useState(null);
     const [desc, setDesc] = useState(null)
     const [prices, setPrices] = useState([])
     const [ extraOptions, setExtraOptions] = useState([]);
     const [extra, setExtra] = useState(null)
+    const [isEditing, setEditing] = useState(false);
 
     const changePrice = (e, index) => {
         const currentPrices = prices;
@@ -27,41 +28,24 @@ const EditPizza = ({ setClose }) => {
         setExtraOptions((prev) => [...prev, extra]);
     };
 
-    const handleUpdate = async () => {
-        const data = new FormData();
-        // set our file
-        data.append("file", file);
-        data.append("upload_preset", "uploads")
-        //upload to cloudinary
+    // update product
+    const handlePizzaUpdate = async (id) => {
+        console.log(id)
         try{
-            const uploadRes = await axios.put(
-                `https://api.cloudinary.com/v1_1/doype43ec/image/upload/${id}`, 
-            data
-            );
-
-            const { url } = uploadRes.data;
-            const updatedProduct = {
-                title,
-                desc,
-                img: url,
-                prices,
-                extraOptions,
-            };
-
-            await axios.put(`http://localhost:3000/api/product/${id}`, updatedProduct);
-            setClose(true);
-        } catch (err) {
+            const res = await axios.get(`http://localhost:3000/api/product/${$id}`);
+            setProductList(productList.filter((pizza) => pizza._id !== id));
+        }catch (err) {
             console.log(err)
         }
     };
-
+          
     return(
         <div className={styles.container}>
             <div className={styles.wrapper}>
-                <span onClick={() => setClose(true)} className={styles.close}>
+                <span onClick={() => setPizzaClose(true)} className={styles.close}>
                     X
                 </span>
-                <h1>Update Pizza</h1>
+                <h1>Add a new pizza</h1>
                 <div className={styles.item}>
                     <label className={styles.label}>Choose an Image</label>
                     {/* setting the file means we cannot choose multiple files, it can only be one per time */}
@@ -134,7 +118,7 @@ const EditPizza = ({ setClose }) => {
                         ))}
                     </div>
                     </div>
-                <button className={styles.addButton} onClick={handleUpdate}>
+                <button className={styles.addButton} onClick={handlePizzaUpdate}>
                     Update
                 </button>
             </div>

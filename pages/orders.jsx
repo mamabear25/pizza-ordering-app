@@ -1,29 +1,38 @@
 import styles from "../styles/Admin.module.css";
-import Image from "next/image";
 import axios from "axios";
 import { useUser } from '@auth0/nextjs-auth0/client';
-import { useState, useEffect } from "react";
+import { useState, useEffect} from "react";
 
-const AdminOrders = ({ orders }) => {
+const AdminOrders = () => {
     const { user, error, isLoading } = useUser();
-    const [orderList, setOrderList] = useState([]);
+    const [orders, setOrders] = useState([]);
     const status = ["preparing", "enroute", "delivered"]
 
+    //  get products
+    const getOrders = async () => {
+        const res = await axios.get("http://localhost:3000/api/orders");
+    
+        setOrders(res.data);
+    };
+    
+    useEffect(() => {
+        getOrders();
+    }, []);
 
     // get all orders and status
     const handleStatus = async (id) => {
         // for each order, we're searching for the order_id which equals the id we want to update, this will return another array and we'll take just the first item
-        const item = orderList.filter((order) => order._id === id)[0];
+        const item = orders.filter((order) => order._id === id)[0];
         const currentStatus = item.status
         
         try{
             const res = await axios.put("http://localhost:3000/api/orders/" + id, {
                 status: currentStatus + 1,
             });
-            setOrderList([
+            setOrders([
                 res.data,
                 // delete the previous version of the order..
-                ...orderList.filter((order) => order._id !== id),
+                ...orders.filter((order) => order._id !== id),
             ]);
         } catch (err) {
             console.log(err)
@@ -44,10 +53,10 @@ const AdminOrders = ({ orders }) => {
                         <th>Action</th>
                     </tr>
                 </tbody>
-                {orderList.map((order)=>(
+                {orders.map((order) => (
                 <tbody key={order._id}>
                     <tr className={styles.trTitle}>
-                        <td>{order.id.slice(0,5)}...</td>
+                        <td>{order._id.slice(0,5)}...</td>
                         <td>{order.customer}</td>
                         <td>{order.total}</td>
                         {/* check the order and payment method.. if it's 0[cash on delivery] if it's not 0[paypal]*/}
@@ -61,7 +70,18 @@ const AdminOrders = ({ orders }) => {
                 ))}
             </table>
         </div>
-    )
-}
+    );
+};
+
+export const getServerSideProps = async () => {
+    const orderRes = await axios.get("http://localhost:3000/api/orders");
+  
+    return {
+      props: {
+        orders: orderRes.data,
+      },
+    };
+  };
+  
 
 export default AdminOrders;

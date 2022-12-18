@@ -2,10 +2,10 @@ import { useState } from "react";
 import styles from "../styles/EditProduct.module.css";
 import axios from "axios";
 
-const EditDrinks = ({ setClose }) => {
+const EditDrinks = ({ drink, setDrinkClose }) => {
     const [file, setFile] = useState(null);
-    const [title, setTitle] = useState(null);
-    const [price, setPrice] = useState([])
+    const [title, setTitle] = useState();
+    const [price, setPrice] = useState("")
 
     const changePrice = (e, index) => {
         const currentPrice = price;
@@ -13,7 +13,7 @@ const EditDrinks = ({ setClose }) => {
         setPrice(currentPrice);
     };
 
-    const handleUpdate = async () => {
+    const handleUpdate = async (id) => {
         const data = new FormData();
         // set our file
         data.append("file", file);
@@ -21,21 +21,20 @@ const EditDrinks = ({ setClose }) => {
         //upload to cloudinary
         try{
             const uploadRes = await axios.put(
-                `https://api.cloudinary.com/v1_1/doype43ec/image/upload/${id}`, 
+                "https://api.cloudinary.com/v1_1/doype43ec/image/upload", 
             data
             );
 
             const { url } = uploadRes.data;
             const updatedProduct = {
+                id,
                 title,
-                desc,
                 img: url,
-                prices,
-                extraOptions,
+                price,
             };
 
             await axios.put(`http://localhost:3000/api/drinks/${id}`, updatedProduct);
-            setClose(true);
+            setDrinkClose(true);
         } catch (err) {
             console.log(err)
         }
@@ -44,7 +43,7 @@ const EditDrinks = ({ setClose }) => {
     return(
         <div className={styles.container}>
             <div className={styles.wrapper}>
-                <span onClick={() => setClose(true)} className={styles.close}>
+                <span onClick={() => setDrinkClose(true)} className={styles.close}>
                     X
                 </span>
                 <h1>Update Drink</h1>
@@ -75,6 +74,15 @@ const EditDrinks = ({ setClose }) => {
             </div>
         </div>
     );
+};
+
+export const getServerSideProps = async ({ params }) => {
+    const res = await axios.get(`http://localhost:3000/api/drinks/${params.id}`);
+    return{
+      props:{
+        drink: res.data,
+      },
+    };
 };
 
 export default EditDrinks;

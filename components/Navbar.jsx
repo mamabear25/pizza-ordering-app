@@ -2,7 +2,7 @@ import styles from "../styles/Navbar.module.css";
 import Image from "next/image";
 import { useSelector } from "react-redux";
 import Link from "next/link";
-import { useUser } from '@auth0/nextjs-auth0/client';
+import { useUser, withPageAuthRequired } from '@auth0/nextjs-auth0/client';
 
 const Navbar = () => {
     const { user, isLoading } = useUser();
@@ -29,15 +29,19 @@ const Navbar = () => {
                     </Link>
                     <Image src="/img/logo.png" alt="" width="150" height="150"/>
                     <li className={styles.listItem}>Contact</li>
-                    {user && (
-                    <>
-                    <Link href="/promos" passHref>
-                        <li className={styles.listItem}>Promos</li>
-                    </Link>
-                    <Link href="/admin" passHref>
-                        <li className={styles.listItem}>Admin</li>
-                    </Link>
-                    </>
+                    {user["http://techmomma-fastfood.com/roles"].includes("Admin") &&(
+                        <>
+                        <Link href="/admin" passHref>
+                            <div className={styles.title}>
+                                <li className={styles.listItem}>Admin</li>
+                            </div>
+                        </Link>
+                        <Link href="/promos" passHref>
+                            <div className={styles.title}>
+                                <li className={styles.listItem}>Promo</li>
+                            </div>
+                        </Link>
+                        </>
                     )}
                     {!isLoading && !user && (
                     <Link href="/api/auth/login">
@@ -72,6 +76,6 @@ const Navbar = () => {
     );
 };
 
-export default Navbar;
-
-
+export default withPageAuthRequired(Navbar, {
+    onError: error => <ErrorMessage>{error.message}</ErrorMessage>
+  });

@@ -1,0 +1,44 @@
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,700&family=Josefin+Sans:wght@100;200;300;400&family=Lora:ital,wght@1,400;1,500;1,600&family=Playfair+Display:ital,wght@0,500;0,800;1,400&family=Varela&display=swap');
+
+.container{
+    display: flex;
+    padding: 50px;
+    flex-direction: column;
+}
+
+.wrapper{
+    display: flex;
+    justify-content: space-around;
+}
+
+.name{
+    padding: 20px;
+    font-size: 20px;
+    text-align: center;
+    font-family: 'Fraunces', serif;
+}
+
+.title{
+    font-family: 'Playfair Display', serif;
+    background-color: #d1411e;
+    padding: 10px;
+    border-radius: 10px;
+    width:fit-content;
+    color: white;
+    position: relative;
+    left: 35px;
+    font-size: 22px;
+}
+
+.listItem{
+    list-style:square;
+    font-size: 18px;
+    font-family: 'Josefin Sans', sans-serif;
+}
+
+.level{
+    font-size: 18px;
+    font-style: italic;
+    color:#d67e68;
+    font-family: 'Fraunces', serif;
+}

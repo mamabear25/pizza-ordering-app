@@ -1,4 +1,42 @@
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,700&family=Josefin+Sans:wght@100;200;300;400&family=Lora:ital,wght@1,400;1,500;1,600&family=Playfair+Display:ital,wght@0,500;0,800;1,400&family=Varela&display=swap');
+
 .container{
     padding: 50px 40px;
 }
 
+.name{
+    font-family: 'Fraunces', serif;
+    font-size: 22px;
+}
+
+.details{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 20px;
+    color: rgba(0, 128, 128, 0.74)
+}
+
+.email{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 18px;
+}
+
+.image{
+    border-radius: 50%;
+    width: 7%;
+    height: 7%;
+}
+
+.listItem{
+    border: 1px solid #d1421e25; 
+    padding-top: 20px;
+    padding-bottom: 20px;
+    width: 30%;
+    color: #d1411e;
+    list-style: none;
+    padding-left: 5px;
+    font-family: 'Fraunces', serif;
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

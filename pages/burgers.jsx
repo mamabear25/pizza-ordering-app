@@ -7,12 +7,12 @@ import AddBurger from "../components/AddBurger";
 
 
 export default function BurgerHome({ burgerList }) {
-  const [close, setClose] = useState(true);
+  const [closeBurger, setBurgerClose] = useState(true);
   return (
     <div className={styles.container}>
-      {<AddBurgerButton setClose={setClose} />}
+      {<AddBurgerButton setBurgerClose={setBurgerClose} />}
       <BurgerList burgerList={burgerList} />
-      {!close && <AddBurger setClose={setClose} />}
+      {!closeBurger && <AddBurger setBurgerClose={setBurgerClose} />}
     </div>
   );
 }

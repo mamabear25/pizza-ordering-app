@@ -11,7 +11,6 @@ const BurgerCard = ({ burger }) => {
             <div className={styles.wrapper}>
                 <h1 className={styles.title}>{burger.title}</h1>
                 <span className={styles.price}>&#8358;{burger.prices[0]}</span>
-                <p className={styles.desc}>{burger.desc}</p>
             </div>
         </div>
     );
