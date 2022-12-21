@@ -15,6 +15,4 @@ const AddDrinkButton = ({ setDrinkClose }) => {
   );
 };
 
-export default withPageAuthRequired(AddDrinkButton, {
-  onError: error => <ErrorMessage>{error.message}</ErrorMessage>
-});
+export default withPageAuthRequired(AddDrinkButton);

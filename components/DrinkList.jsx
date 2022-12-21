@@ -18,7 +18,7 @@ const DrinkList = () => {
 
     return (
         <div className={styles.container}>
-            <h1 className={styles.title}>techMomma's Drinks</h1>
+            <h1 className={styles.title}>techMommas Drinks</h1>
             <p className={styles.desc}>
                 lorem ipsum dolor sit amet conecteur auris sed dignissim ipsum
             </p>

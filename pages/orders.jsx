@@ -88,6 +88,4 @@ export const getServerSideProps = async () => {
   };
   
 
-export default withPageAuthRequired(AdminOrders, {
-    onError: error => <ErrorMessage>{error.message}</ErrorMessage>
-  });
+export default withPageAuthRequired(AdminOrders);

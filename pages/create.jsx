@@ -37,6 +37,4 @@ const CreateProducts = () => {
     );
 };
 
-export default withPageAuthRequired(CreateProducts, {
-    onError: error => <ErrorMessage>{error.message}</ErrorMessage>
-  });
+export default withPageAuthRequired(CreateProducts);
