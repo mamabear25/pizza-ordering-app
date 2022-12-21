@@ -5,12 +5,26 @@ import axios from "axios";
 const AddDrink = ({ setDrinkClose }) => {
     const [file, setFile] = useState(null);
     const [title, setTitle] = useState(null);
-    const [price, setPrice] = useState(null);
+    const [desc, setDesc] = useState(null)
+    const [prices, setPrices] = useState([])
+    const [ extraOptions, setExtraOptions] = useState([]);
+    const [extra, setExtra] = useState(null)
 
     const changePrice = (e, index) => {
-        const currentPrice = price;
+        const currentPrices = prices;
+        //update current prices
+        currentPrices[index] = e.target.value;
         // set prices here
-        setPrice(currentPrice);
+        setPrices(currentPrices);
+    };
+
+    const handleExtraInput = (e) => {
+        setExtra({...extra, [e.target.name]: e.target.value});
+    };
+
+    const handleExtra = (e) => {
+        // setting state using previous data
+        setExtraOptions((prev) => [...prev, extra]);
     };
 
     const handleCreate = async () => {
@@ -28,8 +42,10 @@ const AddDrink = ({ setDrinkClose }) => {
             const { url } = uploadRes.data;
             const newProduct = {
                 title,
+                desc,
                 img: url,
-                price
+                prices,
+                extraOptions,
             };
 
             await axios.post("http://localhost:3000/api/drinks", newProduct);
@@ -59,16 +75,65 @@ const AddDrink = ({ setDrinkClose }) => {
                     onChange={(e) => setTitle(e.target.value)} />
                 </div>
                 <div className={styles.item}>
-                    <label className={styles.label}>Price</label>
+                    <label 
+                    className={styles.label}>Description</label>
+                    <textarea
+                    rows={4}
+                    type="text"
+                    onChange={(e) => setDesc(e.target.value)} />
+                </div>
+                <div className={styles.item}>
+                    <label className={styles.label}>Prices</label>
                     <div className={styles.priceContainer}>
                         <input 
                         className={`${styles.input} ${styles.inputSm}`}
                         type="number"
-                        placeholder="500"
-                        onChange={(e) => setPrice(e.target.value)}
+                        placeholder="Small"
+                        onChange={(e) => changePrice(e, 0)} 
+                        />
+                        <input 
+                        className={`${styles.input} ${styles.inputSm}`}
+                        type="number"
+                        placeholder="Medium"
+                        onChange={(e) => changePrice(e, 1)} 
+                        />
+                        <input 
+                        className={`${styles.input} ${styles.inputSm}`}
+                        type="number"
+                        placeholder="Large"
+                        onChange={(e) => changePrice(e, 2)} 
                         />
                     </div>
                 </div>
+                <div className={styles.item}>
+                    <label className={styles.label}>Ice</label>
+                    <div className={styles.extra}>
+                        <input
+                        className={`${styles.input} ${styles.inputSm}`}
+                        type="text"
+                        placeholder="item"
+                        name="text"
+                        onChange={handleExtraInput}
+                        />
+                        <input
+                        className={`${styles.input} ${styles.inputSm}`}
+                        type="number"
+                        placeholder="price"
+                        name="price"
+                        onChange={handleExtraInput}
+                        />
+                        <button className={styles.extraButton} onClick={handleExtra}>
+                            Add
+                        </button>
+                    </div>
+                    <div className={styles.extraItems}>
+                        {extraOptions.map((options) =>(
+                            <span key={options.text} className={styles.extraItem}>
+                                {options.text}
+                            </span>
+                        ))}
+                    </div>
+                    </div>
                 <button className={styles.addButton} onClick={handleCreate}>
                     Create
                 </button>

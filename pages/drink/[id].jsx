@@ -6,13 +6,37 @@ import { useDispatch } from "react-redux";
 import {addProduct} from "../../redux/cartSlice";
 import Link from "next/link";
 
-const Burger = ({ drink }) => {
-    const [price, setPrice] = useState(drink.price);
+const Drink = ({ drink }) => {
+    const [price, setPrice] = useState(drink.prices[0]);
+    const [size, setSize] = useState(0);
     const [quantity, setQuantity] = useState(1);
+    const [extras, setExtras] = useState([]);
     const dispatch = useDispatch();
 
+    const changePrice = (number) => {
+        setPrice(price + number);
+    };
+
+    const handleSize = (sizeIndex) => {
+        const diff = drink.prices[sizeIndex] - drink.prices[size];
+        setSize(sizeIndex);
+        changePrice(diff);
+    };
+
+    const handleChange = (e, options) => {
+        const checked = e.target.checked;
+
+        if (checked) {
+            changePrice(options.price)
+            setExtras((prev) => [...prev, options]);
+        } else {
+            changePrice(-options.price)
+            setExtras(extras.filter((extra) => extra._id !== options._id));
+        }
+    };
+
     const handleClick = () => {
-        dispatch(addProduct({...drink, price, quantity}));
+        dispatch(addProduct({...drink, extras, price, quantity}));
     };
 
     return (
@@ -26,6 +50,36 @@ const Burger = ({ drink }) => {
                 <h1 className={styles.title}>{drink.title}</h1>
                 <span className={styles.price}>&#8358;{price}</span>
                 <p className={styles.desc}>{drink.desc}</p>
+                <h3 className={styles.choose}>Choose size</h3>
+                <div className={styles.sizes}>
+                    <div className={styles.size} onClick={() =>handleSize(0)}>
+                        <Image src="/img/size.png" layout="fill" alt="" />
+                        <span className={styles.number}>Small</span>
+                    </div>
+                    <div className={styles.size} onClick={() =>handleSize(1)}>
+                        <Image src="/img/size.png" layout="fill" alt="" />
+                        <span className={styles.number}>Medium</span>
+                    </div>
+                    <div className={styles.size} onClick={() =>handleSize(2)}>
+                        <Image src="/img/size.png" layout="fill" alt="" />
+                        <span className={styles.number}>Large</span>
+                    </div>
+                </div>
+                <h3 className={styles.choose}>Choose preferred Flavour</h3>
+                <div className={styles.flavour}>
+                    {drink.extraOptions.map((options) => (
+                    <div className={styles.options} key={options._id}>
+                        <input 
+                        type="checkbox" 
+                        id={options.text} 
+                        name={options.text} 
+                        className={styles.checkbox}
+                        onChange={(e) =>handleChange(e, options)}
+                        />
+                        <label htmlFor="cheese">{options.text}</label>
+                    </div>
+                    ))}
+                </div>
                 <div className={styles.add}>
                     <input 
                     onChange={(e) => setQuantity(e.target.value)} 
@@ -58,4 +112,4 @@ export const getServerSideProps = async ({ params }) => {
     };
 };
 
-export default Burger;
+export default Drink;

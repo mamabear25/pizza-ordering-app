@@ -149,6 +149,3 @@ const EditPizza = ({ setPizzaClose, id }) => {
 };
 
 export default EditPizza;
-
-
-

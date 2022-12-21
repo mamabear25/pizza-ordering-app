@@ -6,14 +6,28 @@ const DrinkSchema = new mongoose.Schema({
         required: true,
         maxLength: 40,
     },
+    desc:{
+        type: String,
+        required: true,
+        maxLength: 100,
+    },
     img:{
         type: String,
         required: true,
     },
-    price:{
-        type: Number,
+    prices:{
+        type: [Number],
         required: true,
     },
+    extraOptions: {
+        type: [
+            {
+                text: { type: String, required: true },
+                price: { type: Number, required: true },
+            },
+        ],
+    },
+
   },
  {timestamps: true}
 );

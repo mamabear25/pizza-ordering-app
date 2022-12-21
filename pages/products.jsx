@@ -5,12 +5,12 @@ import { useUser } from '@auth0/nextjs-auth0/client';
 import { useState, useEffect } from "react";
 import EditPizzaButton from "../components/EditPizzaButton";
 import EditPizza from "../components/EditPizza";
-import EditDrinksButton from "../components/EditDrinksButton";
-import EditDrinks from "../components/EditDrinks";
-import EditPromoButton from "../components/EditPromoButton";
-import EditPromo from "../components/EditPromo";
-import EditBurgerButton from "../components/EditBurgerButton";
-import EditBurger from "../components/EditBurger";
+// import EditDrinksButton from "../components/EditDrinksButton";
+// import EditDrinks from "../components/EditDrinks";
+// import EditPromoButton from "../components/EditPromoButton";
+// import EditPromo from "../components/EditPromo";
+// import EditBurgerButton from "../components/EditBurgerButton";
+// import EditBurger from "../components/EditBurger";
 
 
 const AllProducts = () => {
@@ -141,11 +141,11 @@ const AllProducts = () => {
                                 <td>{product.title}</td>
                                 <td>{product.prices[0]}</td>
                                 <td>
-                                    <div className={styles.align}>
-                                        {<EditPizzaButton setPizzaClose={setPizzaClose}/>}
+                                    {/* <div className={styles.align}> */}
+                                        {/* {<EditPizzaButton setPizzaClose={setPizzaClose}/>} */}
                                         <button className={styles.button} onClick={()=>handlePizzaDelete(product._id)}>Delete</button>
-                                        {!closePizza && <EditPizza setPizzaClose={setPizzaClose} />}
-                                    </div>
+                                        {/* {!closePizza && <EditPizza setPizzaClose={setPizzaClose} />} */}
+                                    {/* </div> */}
                                 </td>
                         </tr>
                     </tbody>
@@ -180,9 +180,9 @@ const AllProducts = () => {
                                 <td>{burger.prices[0]}</td>
                                 <td>
                                     <div className={styles.align}>
-                                        {<EditBurgerButton setBurgerClose={setBurgerClose}/>}
+                                        {/* {<EditBurgerButton setBurgerClose={setBurgerClose}/>} */}
                                         <button className={styles.button} onClick={()=>handleBurgerDelete(burger._id)}>Delete</button>
-                                        {!closeBurger && <EditBurger setBurgerClose={setBurgerClose} />}
+                                        {/* {!closeBurger && <EditBurger setBurgerClose={setBurgerClose} />} */}
                                     </div>
                                 </td>
                             </tr>
@@ -216,9 +216,9 @@ const AllProducts = () => {
                                 <td>{promo.title}</td>
                                 <td>
                                     <div className={styles.align}>
-                                        {<EditPromoButton setPromoClose={setPromoClose}/>}
+                                        {/* {<EditPromoButton setPromoClose={setPromoClose}/>} */}
                                         <button className={styles.button} onClick={()=>handlePromoDelete(promo._id)}>Delete</button>
-                                        {!closePromo && <EditPromo setPromoClose={setPromoClose} />}
+                                        {/* {!closePromo && <EditPromo setPromoClose={setPromoClose} />} */}
                                     </div>
                                 </td>
                             </tr>
@@ -254,9 +254,9 @@ const AllProducts = () => {
                                         <td>{drink.price}</td>
                                         <td>
                                             <div className={styles.align}>
-                                                {<EditDrinksButton setDrinkClose={setDrinkClose}/>}
+                                                {/* {<EditDrinksButton setDrinkClose={setDrinkClose}/>} */}
                                                 <button className={styles.button} onClick={()=>handleDrinkDelete(drink._id)}>Delete</button>
-                                                {!closeDrink && <EditDrinks setDrinkClose={setDrinkClose} />}
+                                                {/* {!closeDrink && <EditDrinks setDrinkClose={setDrinkClose} />} */}
                                             </div>
                                         </td>
                                     </tr>

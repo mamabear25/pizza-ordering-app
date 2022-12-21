@@ -13,26 +13,35 @@
 
 .name{
     padding: 20px;
-    font-size: 20px;
+    font-size: 30px;
     text-align: center;
     font-family: 'Fraunces', serif;
 }
 
 .title{
     font-family: 'Playfair Display', serif;
-    background-color: #d1411e;
-    padding: 10px;
+    border: 1px solid rgb(75, 66, 66);
+    padding: 7px;
     border-radius: 10px;
     width:fit-content;
     color: white;
+    background-color: #d0411e;
     position: relative;
     left: 35px;
-    font-size: 22px;
+    font-size: 20px;
+    transition: transform .3s;
+}
+  
+.title:hover {
+-ms-transform: scale(1.2); /* IE 9 */
+-webkit-transform: scale(1.2); /* Safari 3-8 */
+transform: scale(1.2); 
 }
 
 .listItem{
     list-style:square;
-    font-size: 18px;
+    font-size: 22px;
+    line-height: 40px;
     font-family: 'Josefin Sans', sans-serif;
 }
 

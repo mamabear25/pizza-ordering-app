@@ -4,7 +4,7 @@ import { useSelector } from "react-redux";
 import Link from "next/link";
 import { useUser, withPageAuthRequired } from '@auth0/nextjs-auth0/client';
 
-const Navbar = () => {
+const ti = () => {
     const { user, isLoading } = useUser();
     const quantity = useSelector((state) => state.cart.quantity);
 
@@ -76,6 +76,6 @@ const Navbar = () => {
     );
 };
 
-export default withPageAuthRequired(Navbar, {
+export default withPageAuthRequired(ti, {
     onError: error => <ErrorMessage>{error.message}</ErrorMessage>
   });

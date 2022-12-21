@@ -10,8 +10,10 @@ const DrinkCard = ({ drink }) => {
                     <Image src={drink.img} alt="" width="300" height="300"/>
                 </Link>
             </div>
-            <h1 className={styles.title}>{drink.title}</h1>
-            <span className={styles.price}>&#8358;{drink.price}</span>
+            <div className={styles.wrapper}>
+                <h1 className={styles.title}>{drink.title}</h1>
+                <span className={styles.price}>&#8358;{drink.prices[0]}</span>
+            </div>
         </div>
     );
 };
