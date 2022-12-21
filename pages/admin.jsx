@@ -48,7 +48,7 @@ const Admin = () => {
                                 <li>
                                     Deleting Products
                                 </li>
-                                <p>Warning: Clicking 'Delete' cannot be undone.</p>
+                                <p>Clicking <b>Delete</b> cannot be undone.</p>
                             </ul>
                         </div>
                         <div className={styles.link}>
