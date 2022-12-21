@@ -14,7 +14,7 @@ export default function Home() {
                     </p>
                     <p className={styles.text}>Pizza for everyone!</p>
                     <p className={styles.text}>Burger for every mood!</p>
-                    <p className={styles.text}>Don't forget to check out with chilled drinks.</p>
+                    <p className={styles.text}>Check out with chilled drinks.</p>
                 </div>
                 <div className={styles.menu}>
                     <Image src="" alt="" />

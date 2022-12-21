@@ -15,6 +15,4 @@ const AddPizzaButton = ({ setPizzaClose }) => {
   );
 };
 
-export default withPageAuthRequired(AddPizzaButton, {
-  onError: error => <ErrorMessage>{error.message}</ErrorMessage>
-});
+export default withPageAuthRequired(AddPizzaButton);

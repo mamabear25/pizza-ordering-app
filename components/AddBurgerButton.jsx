@@ -14,6 +14,4 @@ const AddBurgerButton = ({ setBurgerClose }) => {
   );
 };
 
-export default withPageAuthRequired(AddBurgerButton, {
-  onError: error => <ErrorMessage>{error.message}</ErrorMessage>
-});
+export default withPageAuthRequired(AddBurgerButton);

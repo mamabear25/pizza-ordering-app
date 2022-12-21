@@ -16,6 +16,4 @@ const AddPromoButton = ({ setClose }) => {
   );
 };
 
-export default withPageAuthRequired(AddPromoButton, {
-  onError: error => <ErrorMessage>{error.message}</ErrorMessage>
-});
+export default withPageAuthRequired(AddPromoButton);
