@@ -4,6 +4,7 @@ import axios from "axios"
 import { useState } from "react";
 import { useDispatch } from "react-redux";
 import {addProduct} from "../../redux/cartSlice";
+import Link from "next/link";
 
 const Burger = ({ drink }) => {
     const [price, setPrice] = useState(drink.price);
@@ -35,6 +36,13 @@ const Burger = ({ drink }) => {
                     <button className={styles.button} onClick={handleClick}>
                         Add to Cart
                     </button>
+                    <div className={styles.more}>
+                        <Link href="/drinks" passHref>
+                            <div className={styles.title}>
+                            <li className={styles.listItem}>More drinks?</li>
+                            </div>
+                        </Link>
+                    </div>
                 </div>
             </div>
         </div>

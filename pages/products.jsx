@@ -11,7 +11,8 @@ import EditPromoButton from "../components/EditPromoButton";
 import EditPromo from "../components/EditPromo";
 import EditBurgerButton from "../components/EditBurgerButton";
 import EditBurger from "../components/EditBurger";
-import Link from "next/link";
+
+
 const AllProducts = () => {
     const [closePizza, setPizzaClose] = useState(true);
     const [closeBurger, setBurgerClose] = useState(true);

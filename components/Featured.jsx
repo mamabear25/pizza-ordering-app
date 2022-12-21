@@ -1,6 +1,9 @@
 import styles from "../styles/Featured.module.css";
 import Image from "next/image";
 import { useState } from "react";
+import Link from "next/link";
+import React from 'react';
+
 
 const Featured = () => {
     const [index, setIndex] = useState(0)
@@ -9,6 +12,8 @@ const Featured = () => {
         "/img/thiss.png",
         "/img/featured.png",
     ];
+
+    const delay = 5000;
 
     const handleArrow = (direction) => {
         if(direction==="l"){
@@ -19,11 +24,24 @@ const Featured = () => {
             setIndex(index !== 2 ? index+1 : 0)
         }
     }
+
+    React.useEffect(() => {
+        setTimeout(
+          () =>
+            setIndex((prevIndex) =>
+              prevIndex === images.length - 1 ? 0 : prevIndex + 1
+            ),
+          delay
+        );
+    
+        return () => {};
+    }, [index]);
     
     return (
         <div className={styles.container}>
             <div className={styles.arrowContainer} style={{left:0}} onClick={() =>handleArrow("l")}>
-                <Image src="/img/lefticon.png" alt="" objectFit="contain" layout="fill"/>
+                {/* <Image src="/img/lefticon.png" alt="" objectFit="contain" layout="fill"/> */}
+                {/* <Link id="prev" className={styles.prev} href="">&#8810;</Link> */}
             </div>
             <div className={styles.wrapper} style={{transform:`translateX(${-100*index}vw)`}}>
             {images.map((img, i) => (
@@ -32,8 +50,9 @@ const Featured = () => {
                 </div>
             ))}
             </div>
-            <div className={styles.arrowContainer} style={{right:0}} onClick={() =>handleArrow("r")}>
-                <Image src={"/img/lefticon.png"} alt="" layout="fill" objectFit="contain"/>
+            <div className={styles.arrowContainerB} style={{right:0}} onClick={() =>handleArrow("r")}>
+                {/* <Image src={"/img/lefticon.png"} alt="" layout="fill" objectFit="contain"/> */}
+                {/* <Link id="next" className={styles.next} href="">&#8811;</Link>  */}
             </div>
         </div>
     ); 

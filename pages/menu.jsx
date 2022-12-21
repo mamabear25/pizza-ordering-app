@@ -14,7 +14,7 @@ export default function Home() {
                     </p>
                     <p className={styles.text}>Pizza for everyone!</p>
                     <p className={styles.text}>Burger for every mood!</p>
-                    <p className={styles.text}>Don't forget to check out with a chilled drinks.</p>
+                    <p className={styles.text}>Don't forget to check out with chilled drinks.</p>
                 </div>
                 <div className={styles.menu}>
                     <Image src="" alt="" />
@@ -23,7 +23,7 @@ export default function Home() {
             <div className={styles.link}>
                 <div className={styles.imgWrapper}>
                 <Link href="/pizzas" passHref>
-                    <Image src="/img/plink.png" alt="" width="340" height="280"/>
+                    <Image src="/img/test2.png" alt="" width="340" height="280"/>
                     <div className={styles.title}>
                         <li className={styles.listItem}>PIZZAS</li>
                     </div>
@@ -31,7 +31,7 @@ export default function Home() {
                 </div>
                 <div className={styles.imgWrapper}>
                     <Link href="/burgers" passHref>
-                        <Image src="/img/burgerlink.png" alt="" width="340" height="280"/>
+                        <Image src="/img/triplecheese.png" alt="" width="340" height="280"/>
                         <div className={styles.title}>
                             <li className={styles.listItem}>BURGERS</li>
                         </div>

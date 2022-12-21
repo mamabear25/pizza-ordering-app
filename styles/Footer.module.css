@@ -3,41 +3,44 @@
     background-color: #222;
     display: flex;
     overflow: hidden;
+    background-image: url("/img/footerr.png");
+    width:100vw;
+    height:51vw; 
+    background-size:cover;
+    background-repeat:no-repeat;
+    background-position:center;
+  /* opacity: 0.8; */
 }
 
 .item{
-    flex: 1;
-    position: relative;
     display: flex;
-    top: 100px;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    text-align: left;
+    background: rgb(0, 0, 0); /* Fallback color */
+    background: rgba(9, 9, 9, 0.772); /* Black background with 0.5 opacity */
 }
 
 .item:last-child{
-    flex: 2;
     padding: 50px;
-    justify-content: space-between;
 }
 
 .card{
-    flex: 1;
     padding: 0px 20px;
-    color: #d1411e;
-    font-weight: bold;
+    color: #db4c28;
+    font-weight: bolder;
 }
 
 .title{
     font-size: 18px;
-    color: #b7903c
+    color: #b7903c;
 }
 
 .text{
     color: lightgray;
 }
 
-.bye{
-    color: lightgray;
-
-}
 
 @media screen and (max-width: 480px) {
     .container{

@@ -30,6 +30,16 @@
     font-size: 18px;
 }
 
+.zoom {
+    transition: transform .3s;
+}
+  
+.zoom:hover {
+-ms-transform: scale(1.2); /* IE 9 */
+-webkit-transform: scale(1.2); /* Safari 3-8 */
+transform: scale(1.2); 
+}
+
 .wrapper{
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }

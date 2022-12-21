@@ -3,10 +3,7 @@ import Image from "next/image"
 
 const Footer = () => {
     return (
-        <div className={styles.container}>
-            <div className={styles.item}>
-                <Image src="/img/footerr.png" objectFit="contain" layout="fill" alt=""/>
-            </div>
+        <div id="contact" className={styles.container}>
             <div className={styles.item}>
                 <div className={styles.card}>
                     <h2>
@@ -18,13 +15,14 @@ const Footer = () => {
                     </p>
                     <p className={styles.text}>
                         CALL US
-                        <br />+2349876543210
-                        <br />+2348987654321
-                        <br />+2376543210987
+                        <br />+2348000000000
+                        <br />+2348000000000
+                        <br />+2348000000000
                     </p>
                     <p className={styles.text}>
                         EMAIL US
-                        <br />techmomma@techmomma.com
+                        <br />silver@techmomma.com
+                        <br />silvernnaokonkwo@gmail.com
                     </p>
                 </div>
                 <div className={styles.card}>
@@ -44,11 +42,6 @@ const Footer = () => {
                     <p className={styles.text}>
                         1234 R. Bronze Road #304.
                         <br /> Portharcourt, Rivers
-                        <br /> (080) 123 568 74
-                    </p>
-                    <p className={styles.text}>
-                        1234 R. Copper Road #304.
-                        <br /> Maitama, Abuja
                         <br /> (080) 123 568 74
                     </p>
                 </div>

@@ -12,7 +12,6 @@ import { useRouter } from "next/router";
 import { reset } from "../redux/cartSlice";
 import OrderDetail from "../components/OrderDetail";
 
-
 const Cart = () => {
     const cart = useSelector((state) => state.cart);
     const [open, setOpen] = useState(false);

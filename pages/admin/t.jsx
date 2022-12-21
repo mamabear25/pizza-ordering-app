@@ -2,19 +2,11 @@ import styles from "../styles/Navbar.module.css";
 import Image from "next/image";
 import { useSelector } from "react-redux";
 import Link from "next/link";
-import { useUser } from '@auth0/nextjs-auth0/client';
+import { useUser, withPageAuthRequired } from '@auth0/nextjs-auth0/client';
 
 const Navbar = () => {
     const { user, isLoading } = useUser();
     const quantity = useSelector((state) => state.cart.quantity);
-
-        const handleClickScroll = () => {
-          const element = document.getElementById('contact');
-          if (element) {
-            // 👇 Will scroll smoothly to the top of the next section
-            element.scrollIntoView({ behavior: 'smooth' });
-          }
-        };
 
     return (
         <div className={styles.container}>
@@ -36,7 +28,21 @@ const Navbar = () => {
                         <li className={styles.listItem}>Menu</li>
                     </Link>
                     <Image src="/img/logo.png" alt="" width="150" height="150"/>
-                    <li className={styles.listItem} onClick={handleClickScroll}>Contact</li>
+                    <li className={styles.listItem}>Contact</li>
+                    {user["http://techmomma-fastfood.com/roles"].includes("Admin") &&(
+                        <>
+                        <Link href="/admin" passHref>
+                            <div className={styles.title}>
+                                <li className={styles.listItem}>Admin</li>
+                            </div>
+                        </Link>
+                        <Link href="/promos" passHref>
+                            <div className={styles.title}>
+                                <li className={styles.listItem}>Promo</li>
+                            </div>
+                        </Link>
+                        </>
+                    )}
                     {!isLoading && !user && (
                     <Link href="/api/auth/login">
                         <li className={styles.listItem}>Login</li>
@@ -52,7 +58,7 @@ const Navbar = () => {
                         href="/api/auth/logout"
                         className="btn btn-link p-0"
                         icon="power-off">
-                        <li className={styles.listItem}>Logout</li>
+                        <li className={styles.listItem}>Log out</li>
                     </Link>
                     </>
                     )}
@@ -70,4 +76,6 @@ const Navbar = () => {
     );
 };
 
-export default Navbar;
+export default withPageAuthRequired(Navbar, {
+    onError: error => <ErrorMessage>{error.message}</ErrorMessage>
+  });

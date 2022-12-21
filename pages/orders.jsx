@@ -1,10 +1,10 @@
 import styles from "../styles/Admin.module.css";
 import axios from "axios";
-import { useUser } from '@auth0/nextjs-auth0/client';
+import { useUser, withPageAuthRequired } from '@auth0/nextjs-auth0/client';
 import { useState, useEffect} from "react";
 
 const AdminOrders = () => {
-    const { user, error, isLoading } = useUser();
+    const { user } = useUser();
     const [orders, setOrders] = useState([]);
     const status = ["preparing", "enroute", "delivered"]
 
@@ -41,6 +41,8 @@ const AdminOrders = () => {
 
     return (
         <div className={styles.item}>
+            {user["http://techmomma-fastfood.com/roles"].includes("Admin") &&(
+            <>
             <h1 className={styles.title}>ORDERS</h1>
             <table className={styles.table}>
                 <tbody>
@@ -54,34 +56,38 @@ const AdminOrders = () => {
                     </tr>
                 </tbody>
                 {orders.map((order) => (
-                <tbody key={order._id}>
-                    <tr className={styles.trTitle}>
-                        <td>{order._id.slice(0,5)}...</td>
-                        <td>{order.customer}</td>
-                        <td>{order.total}</td>
-                        {/* check the order and payment method.. if it's 0[cash on delivery] if it's not 0[paypal]*/}
-                        <td>{order.method === 0 ? (<span>Cash</span>) : (<span>paid</span>)}</td>
-                        <td>{status[order.status]}</td>
-                        <td>
-                            <button onClick={()=>handleStatus(order._id)}>Next Stage</button>
-                        </td>
-                    </tr>
-                </tbody>
+                    <tbody key={order._id}>
+                        <tr className={styles.trTitle}>
+                            <td>{order._id.slice(0, 5)}...</td>
+                            <td>{order.customer}</td>
+                            <td>{order.total}</td>
+                            {/* check the order and payment method.. if it's 0[cash on delivery] if it's not 0[paypal]*/}
+                            <td>{order.method === 0 ? (<span>Cash</span>) : (<span>paid</span>)}</td>
+                            <td>{status[order.status]}</td>
+                            <td>
+                                <button onClick={() => handleStatus(order._id)}>Next Stage</button>
+                            </td>
+                        </tr>
+                    </tbody>
                 ))}
             </table>
+            </>
+            )}
         </div>
     );
 };
 
 export const getServerSideProps = async () => {
-    const orderRes = await axios.get("http://localhost:3000/api/orders");
+    const productRes = await axios.get("http://localhost:3000/api/products");
   
     return {
       props: {
-        orders: orderRes.data,
+        pizza: productRes.data,
       },
     };
   };
   
 
-export default AdminOrders;
+export default withPageAuthRequired(AdminOrders, {
+    onError: error => <ErrorMessage>{error.message}</ErrorMessage>
+  });

@@ -6,6 +6,7 @@ import { useDispatch } from "react-redux";
 import {addProduct} from "../../redux/cartSlice";
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import Link from "next/link";
 
 const Product = ({ pizza }) => {
     const notify = () => toast("Added to Cart");
@@ -93,6 +94,13 @@ const Product = ({ pizza }) => {
                     <button className={styles.button} onClick={handleClick}>
                         Add to Cart
                     </button>
+                    <div className={styles.more}>
+                        <Link href="/pizzas" passHref>
+                            <div className={styles.title}>
+                            <li className={styles.listItem}>More Pizzas</li>
+                            </div>
+                        </Link>
+                    </div>
                 </div>
             </div>
         </div>
