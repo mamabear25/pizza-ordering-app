@@ -51,7 +51,7 @@ const EditPizza = ({ setPizzaClose, id }) => {
                 extraOptions,
             };
 
-            await axios.put("http://localhost:3000/api/products/" + id, newProduct, {new: true});
+            await axios.put("https://pizza-ordering-8f1q08h0h-mamabear25.vercel.app/api/products/" + id, newProduct, {new: true});
             setPizzaClose(true);
         } catch (err) {
             console.log(err)

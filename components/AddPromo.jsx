@@ -27,7 +27,7 @@ const AddPromo = ({ setClose }) => {
                 extraOptions,
             };
 
-            await axios.post("http://localhost:3000/api/promos", newProduct);
+            await axios.post("https://pizza-ordering-8f1q08h0h-mamabear25.vercel.app/api/promos", newProduct);
             setClose(true);
         } catch (err) {
             console.log(err)

@@ -48,7 +48,7 @@ const AddBurger = ({ setBurgerClose }) => {
                 extraOptions,
             };
 
-            await axios.post("http://localhost:3000/api/burgers", newProduct);
+            await axios.post("https://pizza-ordering-8f1q08h0h-mamabear25.vercel.app/api/burgers", newProduct);
             setBurgerClose(true);
         } catch (err) {
             console.log(err)

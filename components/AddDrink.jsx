@@ -48,7 +48,7 @@ const AddDrink = ({ setDrinkClose }) => {
                 extraOptions,
             };
 
-            await axios.post("http://localhost:3000/api/drinks", newProduct);
+            await axios.post("https://pizza-ordering-8f1q08h0h-mamabear25.vercel.app/api/drinks", newProduct);
             setDrinkClose(true);
         } catch (err) {
             console.log(err)
