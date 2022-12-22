@@ -12,7 +12,6 @@ import { useState, useEffect } from "react";
 // import EditBurgerButton from "../components/EditBurgerButton";
 // import EditBurger from "../components/EditBurger";
 
-
 const AllProducts = () => {
     const [closePizza, setPizzaClose] = useState(true);
     const [closeBurger, setBurgerClose] = useState(true);
@@ -23,7 +22,6 @@ const AllProducts = () => {
     const [promoList, setPromoList] = useState([]);
     const [burgerList, setBurgerList] = useState([]);
     const [drinkList, setDrinkList] = useState([]);
-    const [product, setProduct] = useState("")
 
     //  get products
     const getproductList = async (id) => {
@@ -141,11 +139,11 @@ const AllProducts = () => {
                                 <td>{product.title}</td>
                                 <td>{product.prices[0]}</td>
                                 <td>
-                                    {/* <div className={styles.align}> */}
+                                    <div className={styles.align}>
                                         {/* {<EditPizzaButton setPizzaClose={setPizzaClose}/>} */}
                                         <button className={styles.button} onClick={()=>handlePizzaDelete(product._id)}>Delete</button>
                                         {/* {!closePizza && <EditPizza setPizzaClose={setPizzaClose} />} */}
-                                    {/* </div> */}
+                                    </div>
                                 </td>
                         </tr>
                     </tbody>

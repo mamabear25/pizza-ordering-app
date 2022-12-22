@@ -19,7 +19,7 @@ const PromoList = () => {
     return (
         <div className={styles.container}>
             <p className={styles.desc}>
-                HOT DEALS!!!
+                Order Now
             </p>
             <div className={styles.wrapper}>
                 {promoList.map((promo) => (

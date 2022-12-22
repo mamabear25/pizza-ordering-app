@@ -4,7 +4,7 @@ import styles from '../styles/Home.module.css';
 import PromoList from "../components/PromoList";
 import Featured from '../components/Featured';
 
-export default function Index({ promoList }) {
+export default function Home({ promoList }) {
   return (
     <div className={styles.container}>
       <Head>
@@ -15,11 +15,12 @@ export default function Index({ promoList }) {
       <Featured />
       <PromoList promoList={promoList} />
     </div>
-  )
+  );
 }
 
 export const getServerSideProps = async () => {
-  const res = await axios.get("http://localhost:3000/api/promos");
+  // vercel
+  const res = await axios.get("https://pizza-ordering-8f1q08h0h-mamabear25.vercel.app/api/promos");
   return {
     props: {
       promoList: res.data,
