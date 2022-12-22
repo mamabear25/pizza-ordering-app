@@ -20,7 +20,11 @@ export default function Home({ promoList }) {
 
 export const getServerSideProps = async () => {
   // vercel
-  const res = await axios.get("https://pizza-ordering-8f1q08h0h-mamabear25.vercel.app/api/promos");
+  const res = await axios.get("https://pizza-ordering-8f1q08h0h-mamabear25.vercel.app/api/promos", {
+    headers:{
+      "Access-Control-Allow-Origin": "*" 
+    }
+  });
   return {
     props: {
       promoList: res.data,
