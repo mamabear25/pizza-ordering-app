@@ -3,7 +3,6 @@ import Head from 'next/head';
 import styles from '../styles/Home.module.css';
 import PromoList from "../components/PromoList";
 import Featured from '../components/Featured';
-import headers from ""
 
 export default function Home({ promoList }) {
   return (
