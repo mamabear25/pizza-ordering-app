@@ -9,7 +9,13 @@ export default async function handler(req, res) {
 
     await dbConnect()
 
-    if(method === "GET", "OPTIONS"){
+    // Preflight Check:
+    if (method === "OPTIONS") {
+        res.setHeader("Allow", "GET");
+        return res.status(202).json({message: "hi cors"});
+    }
+
+    if(method === "GET"){
         try{
             const promo = await Promo.findById(id);
             res.status(200).json(promo);
