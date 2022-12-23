@@ -3,6 +3,7 @@ import Head from 'next/head';
 import styles from '../styles/Home.module.css';
 import PromoList from "../components/PromoList";
 import Featured from '../components/Featured';
+import headers from ""
 
 export default function Home({ promoList }) {
   return (
@@ -20,7 +21,7 @@ export default function Home({ promoList }) {
 
 export const getServerSideProps = async () => {
   // vercel
-  const res = await axios.get("https://pizza-ordering-app-psi.vercel.app/api/promos");
+  const res = await axios.get("https://pizza-ordering-8f1q08h0h-mamabear25.vercel.app/api/promos");
   return {
     props: {
       promoList: res.data,
