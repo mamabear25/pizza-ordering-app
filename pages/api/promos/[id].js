@@ -2,12 +2,6 @@ import dbConnect from "../../../util/mongo";
 import Promo from "../../../models/Promo";
 
 export default async function handler(req, res) {
-    //set header first to allow request or origin domain (value can be different)
-    res.setHeader('Access-Control-Allow-Origin', 'https://pizza-ordering-app-psi.vercel.app');
-    res.setHeader('Access-Control-Allow-Headers', 'Origin, X-Requested-With, Content-Type, Accept');
-    res.setHeader('Access-Control-Allow-Credentials', true);
-    res.setHeader('Access-Control-Allow-Methods', 'GET, POST, PUT, PATCH, OPTIONS, DELETE');
-
     const { 
         method, 
         query: { id },
@@ -16,9 +10,8 @@ export default async function handler(req, res) {
     await dbConnect()
 
     if(method === 'OPTIONS') {
-        return res.status(200).json(({
-            body: "OK"
-        }))
+        return res.status(200).json(
+            { message: "OK" })
     }
 
     if(method === "GET"){
