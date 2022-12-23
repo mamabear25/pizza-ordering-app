@@ -5,7 +5,6 @@ import PromoList from "../components/PromoList";
 import Featured from '../components/Featured';
 
 export default function Home({ promoList }) {
-
   const fetchData = async () => {
     const product = await axios.get("/api/cors", config);
     const data = product.json(data);
@@ -25,7 +24,7 @@ export default function Home({ promoList }) {
 
 export const getServerSideProps = async () => {
   // vercel
-  const res = await axios.get("https://pizza-ordering-app-psi.vercel.app/api/promos", config);
+  const res = await axios.get("https://pizza-ordering-8f1q08h0h-mamabear25.vercel.app/api/promos", config);
   return {
     props: {
       promoList: res.data,
