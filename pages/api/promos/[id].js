@@ -9,7 +9,7 @@ export default async function handler(req, res) {
 
     await dbConnect()
 
-    if(method === "GET"){
+    if(method === "GET", "OPTIONS"){
         try{
             const promo = await Promo.findById(id);
             res.status(200).json(promo);
