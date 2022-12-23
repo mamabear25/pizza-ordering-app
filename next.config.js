@@ -17,7 +17,8 @@ const nextConfig = {
   images: {
     formats: ['image/avif', 'image/webp'],
     domains: ["res.cloudinary.com", "s.gravatar.com", "lh3.googleusercontent.com", "https://pizza-ordering-8f1q08h0h-mamabear25.vercel.app"],
-  }
+  },
+  domains: ["https://pizza-ordering-8f1q08h0h-mamabear25.vercel.app"],
 };
 
 module.exports = nextConfig
