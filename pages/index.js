@@ -20,7 +20,7 @@ export default function Home({ promoList }) {
 
 export const getServerSideProps = async () => {
   // vercel
-  const res = await axios.get("https://pizza-ordering-app-psi.vercel.app/api/promos");
+  const res = await axios.get("http://localhost:3000/api/promos");
   return {
     props: {
       promoList: res.data,
