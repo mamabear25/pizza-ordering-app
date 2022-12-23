@@ -17,6 +17,7 @@
     "@reduxjs/toolkit": "^1.9.1",
     "@serverless-jwt/next": "^0.2.1",
     "axios": "^1.2.0",
+    "cors": "^2.8.5",
     "eslint": "8.28.0",
     "eslint-config-next": "13.0.5",
     "mongoose": "^6.7.5",
