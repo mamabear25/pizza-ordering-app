@@ -22,7 +22,7 @@ export const getServerSideProps = async () => {
   // vercel
   const res = await axios.get("https://pizza-ordering-8f1q08h0h-mamabear25.vercel.app/api/promos", {
     headers:{
-      "Access-Control-Allow-Origin": "https://pizza-ordering-nr82kh1rl-mamabear25.vercel.app" 
+      "Access-Control-Allow-Origin": "https://pizza-ordering-nr82kh1rl-mamabear25.vercel.app/api/promos" 
     }
   });
   return {
