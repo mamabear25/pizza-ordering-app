@@ -1,12 +1,16 @@
 import dbConnect from "../../../util/mongo";
 import Promo from "../../../models/Promo";
-const cors = require('../functions/cors');
 
-exports.handler = cors(async(req, res) => {
+export default async function handler(req, res) {
     const { 
         method, 
         query: { id },
     } = req;
+
+    if (method === 'OPTIONS') {
+        res.status(200).send("ok");
+        return;
+    }
 
     await dbConnect()
 
@@ -39,5 +43,4 @@ exports.handler = cors(async(req, res) => {
             res.status(500).json(err)
         }
     }
-});
-
+}
