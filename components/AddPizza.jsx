@@ -48,7 +48,7 @@ const AddPizza = ({ setPizzaClose }) => {
                 extraOptions,
             };
 
-            await axios.post("https://pizza-app-omega.vercel.app/api/products", newProduct);
+            await axios.post("https://pizza-jb1hwqmhw-mamabear25.vercel.app/api/products", newProduct);
             setPizzaClose(true);
         } catch (err) {
             console.log(err)

@@ -33,7 +33,7 @@ const EditDrinks = ({ drink, setDrinkClose }) => {
                 price,
             };
 
-            await axios.put(`https://pizza-app-omega.vercel.app/api/drinks/${id}`, updatedProduct);
+            await axios.put(`https://pizza-jb1hwqmhw-mamabear25.vercel.app/api/drinks/${id}`, updatedProduct);
             setDrinkClose(true);
         } catch (err) {
             console.log(err)
@@ -77,7 +77,7 @@ const EditDrinks = ({ drink, setDrinkClose }) => {
 };
 
 export const getServerSideProps = async ({ params }) => {
-    const res = await axios.get(`https://pizza-app-omega.vercel.app/api/drinks/${params.id}`);
+    const res = await axios.get(`https://pizza-jb1hwqmhw-mamabear25.vercel.app/api/drinks/${params.id}`);
     return{
       props:{
         drink: res.data,

@@ -48,7 +48,7 @@ const AddDrink = ({ setDrinkClose }) => {
                 extraOptions,
             };
 
-            await axios.post("https://pizza-app-omega.vercel.app/api/drinks", newProduct);
+            await axios.post("https://pizza-jb1hwqmhw-mamabear25.vercel.app/api/drinks", newProduct);
             setDrinkClose(true);
         } catch (err) {
             console.log(err)

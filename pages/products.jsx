@@ -26,7 +26,7 @@ const AllProducts = () => {
     //  get products
     const getproductList = async (id) => {
         // vercel
-        const res = await axios.get("https://pizza-ordering-8f1q08h0h-mamabear25.vercel.app/api/products");
+        const res = await axios.get("https://pizza-jb1hwqmhw-mamabear25.vercel.app/api/products");
     
         setProductList(res.data);
     };
@@ -37,7 +37,7 @@ const AllProducts = () => {
 
     // get promos
     const getpromoList = async () => {
-        const res = await axios.get("http://localhost:3000/api/promos");
+        const res = await axios.get("https://pizza-jb1hwqmhw-mamabear25.vercel.app/api/promos");
     
         setPromoList(res.data);
     };
@@ -48,7 +48,7 @@ const AllProducts = () => {
 
     // get burgers
     const getburgerList = async () => {
-        const res = await axios.get("https://pizza-ordering-8f1q08h0h-mamabear25.vercel.app/api/burgers");
+        const res = await axios.get("https://pizza-jb1hwqmhw-mamabear25.vercel.app/api/burgers");
     
         setBurgerList(res.data);
     };
@@ -59,7 +59,7 @@ const AllProducts = () => {
 
     // get drinks
     const getdrinkList = async () => {
-        const res = await axios.get("https://pizza-ordering-8f1q08h0h-mamabear25.vercel.app/api/drinks");
+        const res = await axios.get("https://pizza-jb1hwqmhw-mamabear25.vercel.app/api/drinks");
     
         setDrinkList(res.data);
     };
@@ -72,7 +72,7 @@ const AllProducts = () => {
     // delete product
     const handlePizzaDelete = async (id) => {
         try{
-            const res = await axios.delete("https://pizza-ordering-8f1q08h0h-mamabear25.vercel.app/api/products/" + id);
+            const res = await axios.delete("https://pizza-jb1hwqmhw-mamabear25.vercel.app/api/products/" + id);
             setProductList(productList.filter((pizza) => pizza._id !== id));
         }catch (err) {
             console.log(err)
@@ -82,7 +82,7 @@ const AllProducts = () => {
     // delete burger
     const handleBurgerDelete = async (id) => {
         try{
-            const res = await axios.delete("https://pizza-ordering-8f1q08h0h-mamabear25.vercel.app/api/burgers/" + id);
+            const res = await axios.delete("https://pizza-jb1hwqmhw-mamabear25.vercel.app/api/burgers/" + id);
             setBurgerList(burgerList.filter((burger) => burger._id !== id));
         }catch (err) {
             console.log(err)
@@ -92,7 +92,7 @@ const AllProducts = () => {
     // delete promo
     const handlePromoDelete = async (id) => {
         try{
-            const res = await axios.delete("https://pizza-ordering-8f1q08h0h-mamabear25.vercel.app/api/promos/" + id);
+            const res = await axios.delete("https://pizza-jb1hwqmhw-mamabear25.vercel.app/api/promos/" + id);
             setPromoList(promoList.filter((promo) => promo._id !== id));
         }catch (err) {
             console.log(err)
@@ -102,7 +102,7 @@ const AllProducts = () => {
     // delete drinks
     const handleDrinkDelete = async (id) => {
         try{
-            const res = await axios.delete("https://pizza-ordering-8f1q08h0h-mamabear25.vercel.app/api/drinks/" + id);
+            const res = await axios.delete("https://pizza-jb1hwqmhw-mamabear25.vercel.app/api/drinks/" + id);
             setDrinkList(drinkList.filter((drink) => drink._id !== id));
         }catch (err) {
             console.log(err)
@@ -270,11 +270,11 @@ const AllProducts = () => {
 };
 
 export const getServerSideProps = async () => {
-    const productRes = await axios.get("https://pizza-app-omega.vercel.app/api/products");
-    const orderRes = await axios.get("https://pizza-app-omega.vercel.app/api/orders");
-    const promoRes = await axios.get("http://localhost:3000/api/promos");
-    const burgerRes = await axios.get("https://pizza-app-omega.vercel.app/api/burgers");
-    const drinkRes = await axios.get("https://pizza-app-omega.vercel.app/api/drinks");
+    const productRes = await axios.get("https://pizza-jb1hwqmhw-mamabear25.vercel.app/api/products");
+    const orderRes = await axios.get("https://pizza-jb1hwqmhw-mamabear25.vercel.app/api/orders");
+    const promoRes = await axios.get("https://pizza-jb1hwqmhw-mamabear25.vercel.app/api/promos");
+    const burgerRes = await axios.get("https://pizza-jb1hwqmhw-mamabear25.vercel.app/api/burgers");
+    const drinkRes = await axios.get("https://pizza-jb1hwqmhw-mamabear25.vercel.app/api/drinks");
 
     return{
         props: {
