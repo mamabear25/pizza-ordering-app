@@ -1,39 +1,41 @@
 import dbConnect from "../../../util/mongo";
 import Promo from "../../../models/Promo";
-import Cors from 'cors'
+import Cors from 'cors';
 
 // Initializing the cors middleware
+// You can read more about the available options here: https://github.com/expressjs/cors#configuration-options
 const cors = Cors({
-    methods: ['GET', 'HEAD', "OPTIONS"],
-})
+  methods: ['POST', 'GET', 'HEAD', 'OPTIONS'],
+});
 
 // Helper method to wait for a middleware to execute before continuing
 // And to throw an error when an error happens in a middleware
+function runMiddleware(req, res, fn) {
+  return new Promise((resolve, reject) => {
+    fn(req, res, result => {
+      if (result instanceof Error) {
+        return reject(result);
+      }
 
+      return resolve(result);
+    });
+  });
+}
 
 export default async function handler(req, res) {
-
-    function runMiddleware(req, res, fn) {
-        return new Promise((resolve, reject) => {
-          fn(req, res, (result) => {
-            if (result instanceof Error) {
-              return reject(result)
-            }
-      
-            return resolve(result)
-          })
-        })
-    }
-    // Run the middleware
-    await runMiddleware(req, res, cors)
-
-    const { method } = req;
+    //  Run the middleware
 
     await dbConnect()
 
-    res.header( "Access-Control-Allow-Origin" );
+    await runMiddleware(req, res, cors)
 
-    if(method === "GET"){
+    if(req.method === 'OPTIONS') {
+        return res.status(200).json(({
+            body: "OK"
+        }))
+    }
+
+    if(req.method === "GET"){
         try{
             const promos = await Promo.find();
             res.status(200).json(promos);
@@ -43,7 +45,7 @@ export default async function handler(req, res) {
         }
     }
 
-    if(method === "POST"){
+    if(req.method === "POST"){
         try{
             const promo = await Promo.create(req.body);
             res.status(201).json(promo);
