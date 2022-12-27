@@ -17,7 +17,7 @@ export default function Home() {
                     <p className={styles.text}>Check out with chilled drinks.</p>
                 </div>
                 <div className={styles.menu}>
-                    <Image src="" alt="" />
+                    <div></div>
                 </div>
             </div>
             <div className={styles.link}>
