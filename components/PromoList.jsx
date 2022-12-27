@@ -7,7 +7,7 @@ const PromoList = () => {
     const [promoList, setPromoList] = useState([]);
 
     const getPromoList = async () => {
-    const res = await axios.get("https://pizza-ordering-8f1q08h0h-mamabear25.vercel.app/api/promos", {
+    const res = await axios.get("https://pizza-app-omega.vercel.app/api/promos", {
         headers: {
           "Access-Control-Allow-Origin": "*",
           "Access-Control-Allow-Methods": "GET,OPTIONS,PATCH,DELETE,POST,PUT",

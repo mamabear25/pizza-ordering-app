@@ -270,11 +270,11 @@ const AllProducts = () => {
 };
 
 export const getServerSideProps = async () => {
-    const productRes = await axios.get("https://pizza-ordering-8f1q08h0h-mamabear25.vercel.app/api/products");
-    const orderRes = await axios.get("https://pizza-ordering-8f1q08h0h-mamabear25.vercel.app/api/orders");
-    const promoRes = await axios.get("https://pizza-ordering-8f1q08h0h-mamabear25.vercel.app/api/promos");
-    const burgerRes = await axios.get("https://pizza-ordering-8f1q08h0h-mamabear25.vercel.app/api/burgers");
-    const drinkRes = await axios.get("https://pizza-ordering-8f1q08h0h-mamabear25.vercel.app/api/drinks");
+    const productRes = await axios.get("https://pizza-app-omega.vercel.app/api/products");
+    const orderRes = await axios.get("https://pizza-app-omega.vercel.app/api/orders");
+    const promoRes = await axios.get("https://pizza-app-omega.vercel.app/api/promos");
+    const burgerRes = await axios.get("https://pizza-app-omega.vercel.app/api/burgers");
+    const drinkRes = await axios.get("https://pizza-app-omega.vercel.app/api/drinks");
 
     return{
         props: {

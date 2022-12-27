@@ -7,7 +7,7 @@ const PizzaList = () => {
     const [pizzaList, setPizzaList] = useState([]);
 
     const getPizzaList = async () => {
-    const res = await axios.get("https://pizza-ordering-8f1q08h0h-mamabear25.vercel.app/api/products");
+    const res = await axios.get("https://pizza-app-omega.vercel.app/api/products");
 
     setPizzaList(res.data);
     };

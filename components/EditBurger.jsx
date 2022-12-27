@@ -48,7 +48,7 @@ const EditBurger = ({ setBurgerClose }) => {
                 extraOptions,
             };
 
-            await axios.put(`https://pizza-ordering-8f1q08h0h-mamabear25.vercel.app/api/burger/${id}`, updatedProduct);
+            await axios.put(`https://pizza-app-omega.vercel.app/api/burger/${id}`, updatedProduct);
             setBurgerClose(true);
         } catch (err) {
             console.log(err)

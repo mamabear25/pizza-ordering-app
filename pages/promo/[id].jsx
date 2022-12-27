@@ -20,7 +20,7 @@ const Promo = ({ promo }) => {
 };
 
 export const getServerSideProps = async ({ params }) => {
-    const res = await axios.get(`https://pizza-ordering-8f1q08h0h-mamabear25.vercel.app/api/promos/${params.id}`);
+    const res = await axios.get(`https://pizza-app-omega.vercel.app/api/promos/${params.id}`);
     return{
       props:{
         promo: res.data,

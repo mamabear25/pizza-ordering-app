@@ -24,7 +24,7 @@ const EditPromo = ({ setPromoClose }) => {
                 img: url,
             };
 
-            await axios.put(`https://pizza-ordering-8f1q08h0h-mamabear25.vercel.app/api/drinks/${id}`, updatedProduct);
+            await axios.put(`https://pizza-app-omega.vercel.app/api/drinks/${id}`, updatedProduct);
             setPromoClose(true);
         } catch (err) {
             console.log(err)
