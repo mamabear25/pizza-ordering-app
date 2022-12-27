@@ -29,13 +29,15 @@ export default async function handler(req, res) {
 
     await runMiddleware(req, res, cors)
 
-    if(req.method === 'OPTIONS') {
+    const { method } = req;
+
+    if(method === 'OPTIONS') {
         return res.status(200).json(({
             body: "OK"
         }))
     }
 
-    if(req.method === "GET"){
+    if(method === "GET"){
         try{
             const promos = await Promo.find();
             res.status(200).json(promos);
@@ -45,7 +47,7 @@ export default async function handler(req, res) {
         }
     }
 
-    if(req.method === "POST"){
+    if(method === "POST"){
         try{
             const promo = await Promo.create(req.body);
             res.status(201).json(promo);
