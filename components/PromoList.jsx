@@ -7,7 +7,7 @@ const PromoList = () => {
     const [promoList, setPromoList] = useState([]);
 
     const getPromoList = async () => {
-    const res = await axios.get("https://pizza-jb1hwqmhw-mamabear25.vercel.app/api/promos", {
+    const res = await axios.get("http://localhost:3000/api/promos", {
         headers: {
           "Access-Control-Allow-Origin": "*",
           "Access-Control-Allow-Methods": "GET,OPTIONS,PATCH,DELETE,POST,PUT",
