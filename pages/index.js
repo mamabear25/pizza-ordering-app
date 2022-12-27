@@ -19,16 +19,7 @@ export default function Home({ promoList }) {
 }
 
 export const getServerSideProps = async () => {
-  // vercel
-  const res = await axios.get("https://pizza-ermwhi9go-mamabear25.vercel.app/api/promos", {
-    headers: {
-      "Access-Control-Allow-Origin": "*",
-      "Access-Control-Allow-Methods": "GET,OPTIONS,PATCH,DELETE,POST,PUT",
-      "Access-Control-Allow-Headers": "X-CSRF-Token, X-Requested-With, Accept, Accept-Version, Content-Length, Content-MD5, Content-Type, Date, X-Api-Version" ,
-      "Access-Max-Age": "86400"
-
-    }
-  });
+  const res = await axios.get("http://localhost:3000/api/promos");
   return {
     props: {
       promoList: res.data,

@@ -18,7 +18,7 @@ export default function PromoHome({ promoList }) {
 
 export const getServerSideProps = async () => {
 
-  const res = await axios.get("https://pizza-app-omega.vercel.app/api/promos");
+  const res = await axios.get("http://localhost:3000/api/promos");
   return {
     props: {
         promoList: res.data,

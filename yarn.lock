@@ -1241,6 +1241,11 @@
   resolved "https://registry.yarnpkg.com/@vercel/build-utils/-/build-utils-5.7.1.tgz#985c927e8af265e73fa693c52a8e61447e030162"
   integrity sha512-JilBlPlqwH/d4dbRLyxbhr4y3Yb41cfyypGyCFOpdgXo1ie3v2wkNZWNyWpDHSocSS4PpdIGJ1OdnzULd2fdBQ==
 
+"@vercel/build-utils@5.7.2":
+  version "5.7.2"
+  resolved "https://registry.yarnpkg.com/@vercel/build-utils/-/build-utils-5.7.2.tgz#d71d7b80537a8e45d6e5bd63c2b5aa94723c9031"
+  integrity sha512-4ac8nRGlBzXtl7uJi4qRdfDiE+tVh4I17NIxGV6KmV2DzVAdzeaemBhukBgy1T7e7W40zvLMvlH0kgAK2EmQOQ==
+
 "@vercel/go@2.2.20":
   version "2.2.20"
   resolved "https://registry.yarnpkg.com/@vercel/go/-/go-2.2.20.tgz#6652ba2f9fe56113506db76379a25042d7f01985"
@@ -1286,6 +1291,23 @@
     "@edge-runtime/vm" "2.0.0"
     "@types/node" "14.18.33"
     "@vercel/build-utils" "5.7.1"
+    "@vercel/node-bridge" "3.1.2"
+    "@vercel/static-config" "2.0.6"
+    edge-runtime "2.0.0"
+    esbuild "0.14.47"
+    exit-hook "2.2.1"
+    node-fetch "2.6.7"
+    ts-node "8.9.1"
+    typescript "4.3.4"
+
+"@vercel/node@^2.5.14":
+  version "2.8.2"
+  resolved "https://registry.yarnpkg.com/@vercel/node/-/node-2.8.2.tgz#95c196b585da62ebcffb84b0ec84415c986ee40d"
+  integrity sha512-quZzNkn3MhOJ/Z5ugOgmLUXXWq/AMqXsByJPHte/TgnLM+skSpLaOYsB3rT2VUYbx9u3+T6bXQWv8YqJsgjZIQ==
+  dependencies:
+    "@edge-runtime/vm" "2.0.0"
+    "@types/node" "14.18.33"
+    "@vercel/build-utils" "5.7.2"
     "@vercel/node-bridge" "3.1.2"
     "@vercel/static-config" "2.0.6"
     edge-runtime "2.0.0"
@@ -4656,6 +4678,13 @@ vary@^1:
   version "1.1.2"
   resolved "https://registry.yarnpkg.com/vary/-/vary-1.1.2.tgz#2299f02c6ded30d4a5961b0b9f74524a18f634fc"
   integrity sha512-BNGbWLfd0eUPabhkXUVm0j8uuvREyTh5ovRa/dyow/BqAbZJyC+5fU+IzQOzmAKzYqYRAISoRhdQr3eIZ/PXqg==
+
+vercel-cors@^1.0.0:
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/vercel-cors/-/vercel-cors-1.0.0.tgz#621a668f5ac4165e6e6f2cec20bda707082dea51"
+  integrity sha512-NR6wtUIW/KWqhhi9ERWwG9H2FXWapbU1JAkXMovhLvecU6S9FktJKYkPKJ43N5Peb1reaQismO6Pgn0ogF2rkA==
+  dependencies:
+    "@vercel/node" "^2.5.14"
 
 vercel@^28.10.0:
   version "28.10.0"

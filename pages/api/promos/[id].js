@@ -32,9 +32,9 @@ export default async function handler(req, res) {
     } = req;
 
     if (method === 'OPTIONS') {
-        return res.status(200).json(({
-        body: "OK"
-        }))
+        return res.status(200).json({
+        message: "Cors is set"
+    })
     }
 
     await dbConnect()
