@@ -20,7 +20,7 @@ export default function Home({ promoList }) {
 
 export const getServerSideProps = async () => {
   // vercel
-  const res = await axios.get("https://pizza-app-omega.vercel.app/api/promos", {
+  const res = await axios.get("https://pizza-ermwhi9go-mamabear25.vercel.app/api/promos", {
     headers: {
       "Access-Control-Allow-Origin": "https://pizza-app-omega.vercel.app",
       "Access-Control-Allow-Methods": "GET,OPTIONS,PATCH,DELETE,POST,PUT",
