@@ -12,7 +12,7 @@ export default function BurgerHome({ burgerList }) {
 
 export const getServerSideProps = async () => {
 
-  const res = await axios.get("https://pizza-jb1hwqmhw-mamabear25.vercel.app/api/burgers");
+  const res = await axios.get("http://localhost:3000/api/burgers");
   return {
     props: {
         burgerList: res.data,
