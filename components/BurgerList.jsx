@@ -7,7 +7,8 @@ const BurgerList = () => {
     const [burgerList, setBurgerList] = useState([]);
 
     const getBurgerList = async () => {
-    const res = await axios.get("https://pizza-jb1hwqmhw-mamabear25.vercel.app/api/burgers");
+
+    const res = await axios.get("https://pizza-app-omega.vercel.app/api/burgers");
 
     setBurgerList(res.data);
     };
