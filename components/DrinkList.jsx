@@ -7,7 +7,7 @@ const DrinkList = () => {
     const [drinkList, setDrinkList] = useState([]);
 
     const getDrinkList = async () => {
-    const res = await axios.get("https://pizza-jb1hwqmhw-mamabear25.vercel.app/api/drinks");
+    const res = await axios.get("http://localhost:3000/api/drinks");
 
     setDrinkList(res.data);
     };
