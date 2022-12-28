@@ -101,7 +101,7 @@ const Cart = () => {
             <div className={styles.empty}>
                 <div className={styles.emptycontent}>
                     <p className={styles.content}>Go grab something first!,</p>
-                    <p>A Burger or A pizza.. they're all yummy!!</p>
+                    <p>A Burger or A pizza.. they&apos;re all yummy!!</p>
                 </div>
             </div>
           ) : ( 
