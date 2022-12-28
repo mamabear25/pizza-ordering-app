@@ -107,13 +107,18 @@ transform-origin: left;
     color: #d1411e;
 }
 
-@media screen and (max-width:480px) {
-    .item:nth-child(2) {
-        display: none;
+@media only screen and (max-width:480px) {
+
+    .container{
+        width: 100%;
     }
 
-    .item:nth-child(1) {
-        flex: 3;
+    .item{
+        width: 100%;
+    }
+
+    .text{
+        font-size: 8px;
     }
 
 }

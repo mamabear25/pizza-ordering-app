@@ -6,7 +6,7 @@ import Featured from '../components/Featured';
 
 export default function Home({ promoList }) {
   return (
-    <div className={styles.container}>
+    <div className={styles.row}>
       <Head>
         <title>Best Pizza Place in Lagos</title>
         <meta name="description" content="Best pizza shop in Lagos" />

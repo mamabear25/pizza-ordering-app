@@ -48,7 +48,7 @@ const AllProducts = () => {
 
     // get burgers
     const getburgerList = async () => {
-        const res = await axios.get("https://pizza-jb1hwqmhw-mamabear25.vercel.app/api/burgers");
+        const res = await axios.get("http://localhost:3000/api/burgers");
     
         setBurgerList(res.data);
     };

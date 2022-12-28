@@ -18,6 +18,9 @@ const nextConfig = {
     formats: ['image/avif', 'image/webp'],
     domains: ["res.cloudinary.com", "s.gravatar.com", "lh3.googleusercontent.com"],
   },
+  env: {
+    AUTH0_BASE_URL: process.env.AUTH0_BASE_URL ?? process.env.VERCEL_URL ?? 'localhost:3000'
+  }
 };
 
 module.exports = nextConfig

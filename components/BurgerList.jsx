@@ -2,13 +2,15 @@ import styles from "../styles/PizzaList.module.css";
 import BurgerCard from "./BurgerCard";
 import {useState, useEffect} from "react"
 import axios from "axios";
+import { Row, Col } from 'reactstrap';
+
 
 const BurgerList = () => {
     const [burgerList, setBurgerList] = useState([]);
 
     const getBurgerList = async () => {
 
-    const res = await axios.get("https://pizza-app-omega.vercel.app/api/burgers");
+    const res = await axios.get("http://localhost:3000/api/burgers");
 
     setBurgerList(res.data);
     };

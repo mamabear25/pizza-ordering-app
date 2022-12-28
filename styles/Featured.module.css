@@ -165,6 +165,7 @@ float: left;
 @media screen and (max-width:480px) {
     .container{
         height: 50vh;
+        width: 100%;
     }
 }
 
