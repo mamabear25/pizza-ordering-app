@@ -20,7 +20,7 @@ const Promo = ({ promo }) => {
 };
 
 export const getServerSideProps = async ({ params }) => {
-    const res = await axios.get(`http://localhost:3000/api/promos/${params.id}`);
+    const res = await axios.get(`https://pizza-jb1hwqmhw-mamabear25.vercel.app/api/promos/${params.id}`);
     return{
       props:{
         promo: res.data,
