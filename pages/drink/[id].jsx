@@ -104,7 +104,7 @@ const Drink = ({ drink }) => {
 };
 
 export const getServerSideProps = async ({ params }) => {
-    const res = await axios.get(`http://localhost:3000/api/drinks/${params.id}`);
+    const res = await axios.get(`https://pizza-jgk6hlx9v-mamabear25.vercel.app/api/drinks/${params.id}`);
     return{
       props:{
         drink: res.data,

@@ -10,7 +10,7 @@ const BurgerList = () => {
 
     const getBurgerList = async () => {
 
-    const res = await axios.get("http://localhost:3000/api/burgers");
+    const res = await axios.get("https://pizza-jgk6hlx9v-mamabear25.vercel.app/api/burgers");
 
     setBurgerList(res.data);
     };
