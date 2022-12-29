@@ -7,7 +7,7 @@ const PromoList = () => {
     const [promoList, setPromoList] = useState([]);
 
     const getPromoList = async () => {
-    const res = await axios.get("http://localhost:3000/api/promos");
+    const res = await axios.get("https://pizza-jgk6hlx9v-mamabear25.vercel.app/api/promos");
 
     setPromoList(res.data);
     };
