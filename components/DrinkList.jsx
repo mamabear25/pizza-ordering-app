@@ -20,7 +20,7 @@ const DrinkList = () => {
         <div className={styles.container}>
             <h1 className={styles.title}>techMomma&apos;s Drinks</h1>
             <p className={styles.desc}>
-                We've got all the chilled, sizzling and fizzy drinks 
+                We&apos;ve got all the chilled, sizzling and fizzy drinks 
             </p>
             <div className={styles.wrapper}>
                 {drinkList.map((drink) => (
