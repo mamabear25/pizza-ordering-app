@@ -18,7 +18,7 @@ const PizzaList = () => {
 
     return (
         <div className={styles.container}>
-            <h1 className={styles.title}>techMommas Pizza</h1>
+            <h1 className={styles.title}>techMomma&apos;s Pizza</h1>
             <p className={styles.desc}>
                 Here is a list of our finger licking Pizza!
             </p>

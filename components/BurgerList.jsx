@@ -21,9 +21,9 @@ const BurgerList = () => {
 
     return (
         <div className={styles.container}>
-            <h1 className={styles.title}>techMommas Burger</h1>
+            <h1 className={styles.title}>techMomma&apos;s Burger</h1>
             <p className={styles.desc}>
-                lorem ipsum dolor sit amet conecteur auris sed dignissim ipsum
+                Grab any of our signature fluffy or cheesy burger
             </p>
             <div className={styles.wrapper}>
                 {burgerList.map((burger) => (
