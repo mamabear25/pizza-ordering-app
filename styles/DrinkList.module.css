@@ -30,3 +30,9 @@
         text-align: center;
     }
 }
+
+@media (max-width: 950px) and (min-width: 700px){
+    .container{
+        width: 150%;
+    } 
+}

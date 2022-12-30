@@ -159,4 +159,49 @@ animation: 2s counterclockwise infinite;
       top: -5px;
       right: 0;    
     }
+}
+
+@media (max-width: 450px){
+
+  .container{
+    height: 240vh;
+    font-size: 34px;
   }
+
+  .link{
+    flex-direction: column;
+    height: 30px;
+  }
+
+  .text{
+    font-size: 30px;
+  }
+
+  .imgWrapper{
+    font-size: 30px;
+  }
+
+}
+
+@media (max-width: 950px) and (min-width: 700px){
+  .container{
+    width: 1230px;
+    padding-left: 20px;
+    padding-right: 20px;
+    height: 72vh;
+    font-size: 34px;
+    display: flex;
+  }
+
+  .menu{
+    justify-content: center;
+    align-items: center;
+  }
+
+
+  .text{
+    font-size: 28px;
+  }
+
+
+}

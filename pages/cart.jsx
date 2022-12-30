@@ -97,16 +97,17 @@ const Cart = () => {
 
     return (
         <div>
-        {cart.total <= 0 ? (
+            <div className={styles.container}>
+            {cart.total <= 0 ? (
             <div className={styles.empty}>
                 <div className={styles.emptycontent}>
-                    <p className={styles.content}>Go grab something first!,</p>
+                    <p className={styles.content}>Go grab something!,</p>
                     <p>A Burger or A pizza.. they&apos;re all yummy!!</p>
                 </div>
             </div>
           ) : ( 
-            <div className={styles.container}>
-            <><div className={styles.left}>
+            <>
+            <div className={styles.left}>
                     <table className={styles.table}>
                         <tbody>
                             <tr className={styles.trTitle}>
@@ -198,9 +199,9 @@ const Cart = () => {
                         </div>
                     </div>
                     </>
+                )}  
             {cash && <OrderDetail total={cart.total} createOrder={createOrder} />}
         </div>
-            )}  
         </div>
     )
 }

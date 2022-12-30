@@ -41,16 +41,56 @@
 transform: scale(1.1); 
 }
 
-@media screen and (max-width: 480px) {
+@media (max-width: 480px) {
     .container{
-        width: 100%;
+        width: 30%;
     }
 
     .title{
-        font-size: 30px;
+        font-size: 3.2em;
     }
 
     .price, .desc{
-        font-size: 24px;
+        font-size: 3em;
+    }
+}
+
+@media (width: 820px){
+    .container{
+        width: 30%;
+    }
+}
+
+@media (width: 768px){
+    .container{
+        width: 30%;
+    }
+}
+
+@media (width: 912px){
+    .container{
+        width: 30%;
+    }
+}
+
+@media (width: 540px){
+    .container{
+        width: 25%;
+        text-align: center;
+    }
+
+    .title{
+        font-size: 3.2em;
+    }
+
+    .price, .desc{
+        font-size: 3em;
+    }
+}
+
+
+@media (width: 1280px){
+    .container{
+        width: 30%;
     }
 }

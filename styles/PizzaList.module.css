@@ -20,13 +20,30 @@
     flex-wrap: wrap;
 }
 
-@media screen and (max-width: 480px) {
+@media (max-width: 480px) {
     .title{
         text-align: center;
+        font-size: 60px;
     }
 
     .desc{
         width: 90%;
+        font-size: 50px;
         text-align: center;
     }
+}
+
+@media (max-width: 950px) and (min-width: 700px){
+    .container{
+        width: 150%;
+    }
+
+    .title{
+        font-size: 50px;
+    }
+
+    .desc{
+        font-size: 40px;
+    }
+    
 }

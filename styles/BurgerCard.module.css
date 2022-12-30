@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,700&family=Josefin+Sans:wght@100;200;300;400&family=Lora:ital,wght@1,400;1,500;1,600&family=Playfair+Display:ital,wght@0,500;0,800;1,400&family=Varela&display=swap');
 
 .container{
-    width: 22%;
+    width: 30%;
     padding: 10px;
     display: flex;
     flex-direction: column;
@@ -44,16 +44,48 @@ transform: scale(1.2);
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
-@media screen and (max-width: 480px) {
+@media (max-width: 480px) {
     .container{
-        width: 100%;
+        width: 50%;
     }
 
     .title{
-        font-size: 30px;
+        font-size: 3em;
     }
 
     .price, .desc{
-        font-size: 24px;
+        font-size: 3em;
     }
+}
+
+@media (max-width: 950px) and (min-width: 700px){
+    .container{
+        width: 30%;
+        text-align: center;
+    }
+
+    .title{
+        font-size: 2.5em;
+    }
+
+    .price, .desc{
+        font-size: 2em;
+    }
+    
+}
+
+@media (width: 540px){
+    .container{
+        width: 30%;
+        text-align: center;
+    }
+
+    .title{
+        font-size: 2.5em;
+    }
+
+    .price, .desc{
+        font-size: 2em;
+    }
+
 }

@@ -87,10 +87,31 @@
     align-items: center;
 }
 
-@media screen and (max-width: 480px){
+@media (max-width: 480px){
     .container{
+        height: 240vh;
         flex-direction: column;
         padding: 20px;
+    }
+
+    .empty{
+        width: 400%;
+        height: 280%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color:rgba(210, 105, 30, 0.213);
+
+    }
+    
+    .emptycontent{
+        width: 800px;
+        border-radius: 20px;
+        padding: 50px;
+        font-size: 40px;
     }
 
     .table{

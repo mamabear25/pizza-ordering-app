@@ -7,7 +7,7 @@
     align-items: center;
     justify-content: center;
     padding: 20px 40px;
-
+    background-color: rgb(17, 16, 16);
 }
 
 .title{
@@ -38,6 +38,10 @@
         width: 100%;
     }
 
+    .image{
+        width: 400px;
+    }
+
     .title{
         font-size: 30px;
     }
@@ -45,4 +49,27 @@
     .price, .desc{
         font-size: 24px;
     }
+}
+
+@media (max-width: 950px) and (min-width: 700px){
+
+    .container{
+        width: 100%;
+    }
+
+    .image{
+        width: 310px;
+    }
+
+    .title{
+        width: 100%;
+        text-align: center;
+        font-size: 30px;
+    }
+
+    .price, .desc{
+        font-size: 28px;
+        text-align: justify;
+    }
+
 }

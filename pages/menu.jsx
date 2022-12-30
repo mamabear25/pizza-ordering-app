@@ -22,12 +22,12 @@ export default function Home() {
             </div>
             <div className={styles.link}>
                 <div className={styles.imgWrapper}>
-                <Link href="/pizzas" passHref>
-                    <Image src="/img/test2.png" alt="" width="340" height="280"/>
-                    <div className={styles.title}>
-                        <li className={styles.listItem}>PIZZAS</li>
-                    </div>
-                </Link>
+                    <Link href="/pizzas" passHref>
+                        <Image src="/img/test2.png" alt="" width="340" height="280"/>
+                        <div className={styles.title}>
+                            <li className={styles.listItem}>PIZZAS</li>
+                        </div>
+                    </Link>
                 </div>
                 <div className={styles.imgWrapper}>
                     <Link href="/burgers" passHref>

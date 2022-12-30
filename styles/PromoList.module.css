@@ -21,13 +21,29 @@
     justify-content: space-around;
 }
 
-@media screen and (max-width: 480px) {
-    .title{
-        text-align: center;
+@media (max-width: 450px){
+    .container{
+        width: 100%;
+        padding-bottom: 50px;
     }
 
     .desc{
-        width: 90%;
-        text-align: center;
+        padding-top: 30px;
+        height: 150px;
+        font-size: 5em;
+        color: rgb(42, 216, 216);
+    }
+}
+
+@media (max-width: 950px) and (min-width: 700px){
+    .container{
+        width: 1230px;
+        padding-bottom: 30px;
+    }
+
+    .desc{
+        height: 50px;
+        font-size: 4em;
+        color: rgb(42, 216, 216);
     }
 }
