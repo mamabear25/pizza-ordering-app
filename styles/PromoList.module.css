@@ -107,7 +107,7 @@
 }
 
 /* ipad air */
-@media(min-width: 820px) {
+/* @media(min-width: 820px) {
     .container{
         width: 1229px;
         height: 80vh;
@@ -121,7 +121,7 @@
         padding-bottom: 250px;
         color: rgb(41, 170, 170);
     }
-}
+} */
 
 /* ipad mini */
 @media(width: 768px) {
