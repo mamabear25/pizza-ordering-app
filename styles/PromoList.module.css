@@ -140,6 +140,25 @@
     }
 }
 
+@media only screen 
+    and (device-width: 414px) 
+    and (device-height: 896px) 
+    and (-webkit-device-pixel-ratio: 3) {
+        .container{
+            width: 100vh;
+            height: 85vh;
+    
+        }
+    
+        .desc{
+            justify-content: center;
+            height: 1em;
+            font-size: 3em;
+            padding-bottom: 250px;
+            color: rgb(41, 170, 170);
+        }
+    }
+
 /* surface pro*/
 @media(width: 912px) {
     .container{

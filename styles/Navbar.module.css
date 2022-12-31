@@ -172,7 +172,7 @@ transform-origin: left;
     and (device-height: 896px) 
     and (-webkit-device-pixel-ratio: 3) { 
         .container{
-            width: 102vh;
+            width: 100vh;
             height: 200px;
         } 
     

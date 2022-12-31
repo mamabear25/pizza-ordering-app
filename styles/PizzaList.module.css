@@ -153,6 +153,25 @@
    }
 }
 
+
+@media only screen 
+    and (device-width: 414px) 
+    and (device-height: 896px) 
+    and (-webkit-device-pixel-ratio: 3) {
+     .container{
+          width: 100vh; 
+          height: fit-content;
+     } 
+  
+     .title{
+          font-size: 50px; 
+     }
+  
+     .desc{
+          font-size: 40px;
+     }
+    }
+
 /*  Nest Hub */
 @media(width: 1024px) {
     .container{

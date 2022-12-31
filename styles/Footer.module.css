@@ -136,6 +136,24 @@
 
 }
 
+@media only screen 
+    and (device-width: 414px) 
+    and (device-height: 896px) 
+    and (-webkit-device-pixel-ratio: 3) {
+        .container{
+            width: 100vh; 
+            height: 108vh;
+       } 
+    
+       .wrapper{
+           width: 210em; 
+       }
+    
+       .imgContainer{
+           width: 400vh;
+       }
+    }
+
 /*  Nest Hub max */
 @media(width: 1280px) {
     .container{
