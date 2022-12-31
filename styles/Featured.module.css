@@ -21,15 +21,16 @@
 
 @media (max-width:500px) {
     .container{
-         min-width: 500vw; 
+         width: 100%; 
+         height: 116vh;
     } 
 
     .wrapper{
-        width: 2000px;
+        width: 300em;
     }
 
     .imgContainer{
-        width: 280vh;
+        width: 180vh;
     }
 }
 
@@ -50,25 +51,5 @@
     }
 }
 
-
-
-@media (width:390px) {
-    .container{
-        height: 100vh;
-        width: 100%;
-    }
-    .wrapper{
-        width: 500vh;
-        /* margin: 0 auto; */
-    }
-    .imgContainer{
-        width: 100%;
-        /* max-width: 200% */
-    }
-
-    .img{
-        width: 100%;
-    }
-}
 
 

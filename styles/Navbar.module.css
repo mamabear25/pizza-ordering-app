@@ -193,3 +193,9 @@ transform-origin: left;
     }
 
 }
+
+@media(width: 390px) {
+    .container{
+        width: 100%;
+    }  
+}
