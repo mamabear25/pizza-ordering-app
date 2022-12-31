@@ -111,7 +111,7 @@
     cursor: pointer;
 }
 
-@media screen and (max-width: 480px) {
+/* @media screen and (max-width: 480px) {
     .container{
         height: auto;
         text-align: center;
@@ -150,5 +150,508 @@
     .quantity, .button{
         height: 40px;
         padding: 10px 20px;
+    }
+} */
+
+
+/* iphone se */
+@media (width:375px) {
+    .container{
+        height: auto;
+        width: 136vh;
+        text-align: center;
+        flex-direction: column;
+        margin-top: 120px;
+    }
+
+    .imgContainer{
+        width: 70vw;
+        height: 70vw;
+    }
+
+    .title{
+        font-size: 30px;
+        margin: 5px;
+    }
+    
+    .sizes{
+        padding-left: 290px;
+        padding-right: 290px;
+        width: 100%;
+        padding: 0px, 20px;
+    }
+
+    .toppings{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 70px;
+        /* flex-direction: column; */
+    }
+
+    .options{
+        font-size: 20px;
+    }
+
+    .checkbox{
+        width: 20px;
+        height: 20px;
+    }
+
+    .quantity, .button{
+        height: 40px;
+        padding: 10px 20px;
+    }
+}
+
+
+ /* iphone 12pro  pixel5*/
+@media(min-width: 390px) and (max-width:393px) {
+    
+    .container{
+        height: auto;
+        width: 117vh;
+        text-align: center;
+        flex-direction: column;
+        margin-top: 120px;
+    }
+
+    .imgContainer{
+        width: 70vw;
+        height: 70vw;
+    }
+
+    .title{
+        font-size: 30px;
+        margin: 5px;
+    }
+    
+    .sizes{
+        padding-left: 290px;
+        padding-right: 290px;
+        width: 100%;
+        padding: 0px, 20px;
+    }
+
+    .toppings{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 70px;
+        /* flex-direction: column; */
+    }
+
+    .options{
+        font-size: 20px;
+    }
+
+    .checkbox{
+        width: 20px;
+        height: 20px;
+    }
+
+    .quantity, .button{
+        height: 40px;
+        padding: 10px 20px;
+    }
+}
+
+/* samsung s8 */
+@media(width: 360px) {
+    .container{
+        height: auto;
+        width: 130vh;
+        text-align: center;
+        flex-direction: column;
+        margin-top: 120px;
+    }
+
+    .imgContainer{
+        width: 70vw;
+        height: 70vw;
+    }
+
+    .title{
+        font-size: 30px;
+        margin: 5px;
+    }
+    
+    .sizes{
+        padding-left: 290px;
+        padding-right: 290px;
+        width: 100%;
+        padding: 0px, 20px;
+    }
+
+    .toppings{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 70px;
+        /* flex-direction: column; */
+    }
+
+    .options{
+        font-size: 20px;
+    }
+
+    .checkbox{
+        width: 20px;
+        height: 20px;
+    }
+
+    .quantity, .button{
+        height: 40px;
+        padding: 10px 20px;
+    }
+}
+
+/* iphone xr, samsung s20*/
+@media(min-width: 412px) and (max-width: 414px) {
+    .container{
+        height: auto;
+        width: 102vh;
+        text-align: center;
+        flex-direction: column;
+        margin-top: 120px;
+    }
+
+    .imgContainer{
+        width: 70vw;
+        height: 70vw;
+    }
+
+    .title{
+        font-size: 30px;
+        margin: 5px;
+    }
+    
+    .sizes{
+        padding-left: 290px;
+        padding-right: 290px;
+        width: 100%;
+        padding: 0px, 20px;
+    }
+
+    .toppings{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 70px;
+        /* flex-direction: column; */
+    }
+
+    .options{
+        font-size: 20px;
+    }
+
+    .checkbox{
+        width: 20px;
+        height: 20px;
+    }
+
+    .quantity, .button{
+        height: 40px;
+        padding: 10px 20px;
+    }
+}
+
+
+/* surface duo */
+ @media(width: 540px) {
+    .container{
+        flex-direction: column;
+        height: auto;
+        width: 129vh;
+        text-align: center;
+        margin-top: 120px;
+    }
+
+    .imgContainer{
+        width: 90vw;
+        height: 70vw;
+    }
+
+    .title{
+        font-size: 32px;
+        margin-bottom: 5px;
+    }
+    
+    .sizes{
+        padding-top: 10px;
+        padding-left: 290px;
+        padding-right: 330px;
+        width: 100%;
+        margin-left: 40px;
+        padding: 0px, 20px;
+    }
+
+    .toppings{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 40px;
+        padding-bottom: 20px;
+        /* flex-direction: column; */
+    }
+
+
+    .options{
+        font-size: 20px;
+    }
+
+    .checkbox{
+        width: 20px;
+        height: 20px;
+    }
+
+    .quantity, .button{
+        font-size: 24px;
+        height: 40px;
+        padding: 10px 20px;
+    }
+}
+
+/* ipad air and surface pro*/
+@media(min-width: 820px) and (max-width: 912px) {
+    .container{
+        height: auto;
+        width: 100vh;
+        text-align: center;
+        margin-top: 120px;
+    }
+
+    .imgContainer{
+        width: 50vw;
+        height: 70vw;
+    }
+
+    .title{
+        font-size: 32px;
+        margin-bottom: 5px;
+    }
+    
+    .sizes{
+        padding-top: 10px;
+        padding-left: 220px;
+        padding-right: 290px;
+        width: 100%;
+        margin-left: 40px;
+        padding: 0px, 20px;
+    }
+
+    .toppings{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 40px;
+        padding-bottom: 20px;
+        /* flex-direction: column; */
+    }
+
+
+    .options{
+        font-size: 20px;
+    }
+
+    .checkbox{
+        width: 20px;
+        height: 20px;
+    }
+
+    .quantity, .button{
+        font-size: 24px;
+        height: 40px;
+        padding: 10px 20px;
+    }
+}
+
+/* ipad mini */
+@media(width: 768px) {
+    .container{
+        height: auto;
+        width: 118vh;
+        text-align: center;
+        margin-top: 120px;
+    }
+
+    .imgContainer{
+        width: 50vw;
+        height: 70vw;
+    }
+
+    .title{
+        font-size: 32px;
+        margin-bottom: 5px;
+    }
+    
+    .sizes{
+        padding-top: 10px;
+        padding-left: 220px;
+        padding-right: 290px;
+        width: 100%;
+        margin-left: 40px;
+        padding: 0px, 20px;
+    }
+
+    .toppings{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 40px;
+        padding-bottom: 20px;
+        /* flex-direction: column; */
+    }
+
+
+    .options{
+        font-size: 20px;
+    }
+
+    .checkbox{
+        width: 20px;
+        height: 20px;
+    }
+
+    .quantity, .button{
+        font-size: 24px;
+        height: 40px;
+        padding: 10px 20px;
+    }
+}
+
+/* galaxy fold */
+@media(width: 280px) {
+    
+    .container{
+        flex-direction: column;
+        height: auto;
+        width: 157vh;
+        text-align: center;
+        margin-top: 120px;
+    }
+
+    .imgContainer{
+        width: 80vw;
+        height: 70vw;
+    }
+
+    .title{
+        font-size: 32px;
+        margin-bottom: 5px;
+    }
+    
+    .sizes{
+        padding-top: 10px;
+        padding-left: 220px;
+        padding-right: 290px;
+        width: 100%;
+        margin-left: 40px;
+        padding: 0px, 20px;
+    }
+
+    .toppings{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 40px;
+        padding-bottom: 20px;
+        /* flex-direction: column; */
+    }
+
+
+    .options{
+        font-size: 20px;
+    }
+
+    .checkbox{
+        width: 20px;
+        height: 20px;
+    }
+
+    .quantity, .button{
+        font-size: 24px;
+        height: 40px;
+        padding: 10px 20px;
+    }
+}
+
+/*  Nest Hub */
+@media(width: 1024px) {
+    .container{
+        height: auto;
+        width: 100vh;
+        text-align: center;
+        margin-top: 120px;
+    }
+
+    .imgContainer{
+        width: 50vw;
+        height: 70vw;
+    }
+
+    .title{
+        font-size: 32px;
+        margin-bottom: 5px;
+    }
+    
+    .sizes{
+        padding-top: 10px;
+        padding-left: 220px;
+        padding-right: 290px;
+        width: 100%;
+        margin-left: 40px;
+        padding: 0px, 20px;
+    }
+
+    .toppings{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 40px;
+        padding-bottom: 20px;
+        /* flex-direction: column; */
+    }
+
+
+    .options{
+        font-size: 20px;
+    }
+
+    .checkbox{
+        width: 20px;
+        height: 20px;
+    }
+
+    .quantity, .button{
+        font-size: 24px;
+        height: 40px;
+        padding: 10px 20px;
+    }
+
+}
+
+/* laptops desktops */
+/* @media (min-width: 1025px) and (max-width: 1280px){
+    .container{
+        width: 220vh;
+        height: 130px;
+        background-color: yellow;
+    }
+
+    .list{
+        font-size: 30px;
+    }
+} */
+  
+/* Media Query for Large screens */
+@media (min-width: 1500px) {
+    .container{
+        width: 190vh;
+        height: 130px;
+    }
+
+    .list{
+        font-size: 30px;
     }
 }

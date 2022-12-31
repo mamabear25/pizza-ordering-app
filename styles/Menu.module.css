@@ -161,47 +161,253 @@ animation: 2s counterclockwise infinite;
     }
 }
 
-@media (max-width: 450px){
 
-  .container{
-    height: 240vh;
-    font-size: 34px;
-  }
+
+/* iphone se */
+@media (width:375px) {
 
   .link{
     flex-direction: column;
-    height: 30px;
+    height: 1px;
   }
 
   .text{
-    font-size: 30px;
+    padding: 10px;
+    font-size: 25px;
   }
 
   .imgWrapper{
-    font-size: 30px;
-  }
-
-}
-
-@media (max-width: 950px) and (min-width: 700px){
-  .container{
-    width: 1230px;
-    padding-left: 20px;
-    padding-right: 20px;
-    height: 72vh;
-    font-size: 34px;
-    display: flex;
-  }
-
-  .menu{
-    justify-content: center;
-    align-items: center;
-  }
-
-
-  .text{
     font-size: 28px;
   }
 
+  .container{
+      width: 136vh; 
+      height: 230vh;
+ } 
+}
 
+
+/* iphone 12pro  pixel5*/
+@media(min-width: 390px) and (max-width:393px) {
+  
+  .link{
+    flex-direction: column;
+    height: 1px;
+  }
+
+  .text{
+    padding: 10px;
+    font-size: 25px;
+  }
+
+  .imgWrapper{
+    font-size: 28px;
+  }
+
+  .container{
+      width: 116vh; 
+      height: 190vh;
+ } 
+}
+
+/* samsung s8 */
+@media(width: 360px) {
+  .link{
+    flex-direction: column;
+    height: 1px;
+  }
+
+  .text{
+    padding-left: 20px;
+    padding-right: 20px;
+    font-size: 25px;
+  }
+
+  .imgWrapper{
+    font-size: 28px;
+  }
+
+  .container{
+      width: 136vh; 
+      height: 210vh;
+ } 
+}
+
+/* iphone xr, samsung s20*/
+@media(min-width: 412px) and (max-width: 414px) {
+  .link{
+    flex-direction: column;
+    height: 10px;
+  }
+
+  .text{
+    padding: 10px;
+    font-size: 25px;
+  }
+
+  .imgWrapper{
+    font-size: 28px;
+  }
+
+  .container{
+      width: 100vh; 
+      height: 175vh;
+ } 
+}
+
+
+/* surface duo */
+@media(width: 540px) {
+  .link{
+    flex-direction: column;
+    height: 1px;
+  }
+
+  .text{
+    padding-left: 20px;
+    padding-right: 20px;
+    font-size: 27px;
+  }
+
+  .imgWrapper{
+    font-size: 28px;
+  }
+
+  .wrapper{
+    width: 900px;
+  }
+
+  .container{
+      width: 132vh; 
+      height: 220vh;
+ } 
+}
+
+/* ipad air and surface pro*/
+@media(min-width: 820px) and (max-width: 912px) {
+  .link{
+    flex-direction: column;
+    height: 1px;
+  }
+
+  .text{
+    padding-left: 20px;
+    padding-right: 20px;
+    font-size: 27px;
+  }
+
+  .imgWrapper{
+    font-size: 28px;
+  }
+
+  .wrapper{
+    width: 900px;
+  }
+
+  .container{
+      width: 104.2vh; 
+      height: 120vh;
+ } 
+}
+
+/* ipad mini */
+@media(width: 768px) {
+  .link{
+    flex-direction: column;
+    height: 1px;
+  }
+
+  .text{
+    padding: 10px;
+    font-size: 25px;
+  }
+
+  .wrapper{
+    width: 800px;
+  }
+
+  .imgWrapper{
+    font-size: 28px;
+  }
+
+  .container{
+      width: 120vh; 
+      height: 160vh;
+ } 
+}
+
+/* galaxy fold */
+@media(width: 280px) {
+  
+  .link{
+    flex-direction: column;
+    height: 1px;
+  }
+
+  .text{
+    padding: 10px;
+    font-size: 25px;
+  }
+
+  .wrapper{
+    width: 800px;
+  }
+
+  .imgWrapper{
+    font-size: 28px;
+  }
+
+  .container{
+      width: 160vh; 
+      height: 295vh;
+ } 
+}
+
+/*  Nest Hub */
+@media(width: 1024px) {
+  .text{
+    padding: 10px;
+    font-size: 25px;
+  }
+
+  .wrapper{
+    width: 950px;
+  }
+
+  .imgWrapper{
+    font-size: 28px;
+    width: 100%;
+
+  }
+
+  .container{
+      width: 217vh; 
+      height: 150vh;
+ } 
+
+}
+
+/* laptops desktops */
+/* @media (min-width: 1025px) and (max-width: 1280px){
+  .container{
+      width: 220vh;
+      height: 130px;
+      background-color: yellow;
+  }
+
+  .list{
+      font-size: 30px;
+  }
+} */
+
+/* Media Query for Large screens */
+@media (min-width: 1500px) {
+  .container{
+      width: 190vh;
+      height: 130px;
+  }
+
+  .list{
+      font-size: 30px;
+  }
 }

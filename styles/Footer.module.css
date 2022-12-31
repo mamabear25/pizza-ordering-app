@@ -42,35 +42,138 @@
 }
 
 
-@media (max-width: 480px) {
+
+/* iphone se */
+@media (width:375px) {
     .container{
-        height: 120vh;
-        width: 100%;
-        text-align: center;
-        font-size: 34px;
-        /* position: fixed;
-        bottom: 0; */
-    }
+        width: 136vh; 
+        height: 90vh;
+   } 
 }
 
-@media (max-width: 950px) and (min-width: 700px){
+
+ /* iphone 12pro  pixel5*/
+@media(min-width: 390px) and (max-width:393px) {
+    
     .container{
-        height: 100%;
-        width: 150%;
-        text-align: center;
-        font-size: 30px;
-        /* position: fixed;
-        bottom: 0; */
-    }
+        width: 117vh; 
+        height: 80vh;
+   } 
 }
 
-@media (width: 540px){
+/* samsung s8 */
+@media(width: 360px) {
     .container{
-        height: 100%;
-        width: 100%;
-        text-align: center;
+        width: 136vh; 
+        height: 100vh;
+   } 
+}
+
+/* iphone xr, samsung s20*/
+@media(min-width: 412px) and (max-width: 414px) {
+    .container{
+        width: 102vh; 
+        height: 70vh;
+   } 
+}
+
+
+/* surface duo */
+ @media(width: 540px) {
+    .container{
+        width: 132vh; 
+        height: 50vh;
+   } 
+}
+
+/* ipad air and surface pro*/
+@media(min-width: 820px) and (max-width: 912px) {
+    .container{
+        width: 104.2vh; 
+        height: 50vh;
+   } 
+
+   .wrapper{
+       width: 310em; 
+   }
+
+   .imgContainer{
+       width: 400vh;
+   }
+}
+
+/* ipad mini */
+@media(width: 768px) {
+    .container{
+        width: 120vh; 
+        height: 50vh;
+   } 
+}
+
+/* galaxy fold */
+@media(width: 280px) {
+    
+    .container{
+        width: 160vh; 
+        height: 50vh;
+   } 
+}
+
+/*  Nest Hub */
+@media(width: 1024px) {
+    .container{
+        width: 217vh; 
+        height: 108vh;
+   } 
+
+   .wrapper{
+       width: 210em; 
+   }
+
+   .imgContainer{
+       width: 400vh;
+   }
+
+}
+
+/*  Nest Hub max */
+@media(width: 1280px) {
+    .container{
+        width: 160vh; 
+        height: 90vh;
+   } 
+
+   .wrapper{
+       width: 210em; 
+   }
+
+   .imgContainer{
+       width: 400vh;
+   }
+
+}
+
+/* laptops desktops */
+/* @media (min-width: 1025px) and (max-width: 1280px){
+    .container{
+        width: 220vh;
+        height: 130px;
+        background-color: yellow;
+    }
+
+    .list{
         font-size: 30px;
-        /* position: fixed;
-        bottom: 0; */
+    }
+} */
+  
+/* Media Query for Large screens */
+@media (min-width: 1500px) {
+    .container{
+        width: 190vh;
+        height: 130px;
+    }
+
+    .list{
+        font-size: 30px;
     }
 }

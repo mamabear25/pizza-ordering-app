@@ -28,6 +28,6 @@ a {
 
 @media (max-width:767px){
   html, body {
-    width: 200%
+    width: 100%;
   }
 }
