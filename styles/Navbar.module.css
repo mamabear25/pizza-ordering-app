@@ -109,7 +109,7 @@ transform-origin: left;
 
 @media (max-width:767px){
     .container {
-      width: 110vh;
+      width: 105vh;
       height: 300px;
     }
     
