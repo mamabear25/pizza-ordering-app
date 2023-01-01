@@ -44,48 +44,8 @@ transform: scale(1.2);
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
-@media (max-width: 480px) {
+@media (max-width:767px){
     .container{
         width: 50%;
     }
-
-    .title{
-        font-size: 3em;
-    }
-
-    .price, .desc{
-        font-size: 3em;
-    }
-}
-
-@media (max-width: 950px) and (min-width: 700px){
-    .container{
-        width: 30%;
-        text-align: center;
-    }
-
-    .title{
-        font-size: 2.5em;
-    }
-
-    .price, .desc{
-        font-size: 2em;
-    }
-    
-}
-
-@media (width: 540px){
-    .container{
-        width: 30%;
-        text-align: center;
-    }
-
-    .title{
-        font-size: 2.5em;
-    }
-
-    .price, .desc{
-        font-size: 2em;
-    }
-
 }
