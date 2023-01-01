@@ -44,6 +44,6 @@
 @media (max-width:767px){
     .container {
       width: 105vh;
-      height: 50vh;
+      height: fit-content;
     }
 }

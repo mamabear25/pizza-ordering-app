@@ -111,7 +111,7 @@ transform-origin: left;
     .container {
       width: 105vh;
       height: 250px;
-      flex-wrap: wrap;
+      /* flex-wrap: wrap; */
     }
     
     .text:nth-child(1){
@@ -124,7 +124,12 @@ transform-origin: left;
         right: 70px;
     }
 
-    .list{
-        width: fit-content;
+    .texts{
+        margin-left: 0
+    }
+
+    .listItem{
+        /* width: fit-content */
+        padding: 0;
     }
 }
