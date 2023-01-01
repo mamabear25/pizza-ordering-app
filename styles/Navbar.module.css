@@ -122,4 +122,8 @@ transform-origin: left;
         top: 40px;
         right: 70px;
     }
+
+    .list{
+        width: fit-content;
+    }
 }
