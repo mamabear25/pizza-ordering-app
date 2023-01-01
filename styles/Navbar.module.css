@@ -111,6 +111,7 @@ transform-origin: left;
     .container {
       width: 105vh;
       height: 250px;
+      flex-wrap: wrap;
     }
     
     .text:nth-child(1){
