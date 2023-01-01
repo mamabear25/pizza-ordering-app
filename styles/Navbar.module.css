@@ -110,7 +110,7 @@ transform-origin: left;
 @media (max-width:767px){
     .container {
       width: 105vh;
-      height: 300px;
+      height: 250px;
     }
     
     .text:nth-child(1){

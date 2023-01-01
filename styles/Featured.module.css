@@ -22,15 +22,16 @@
 @media (max-width:767px){
     .container {
       width: 105vh;
-      height: 180vh;
+      height: 170vh;
     }
 
     .wrapper{
-        width: 500vh;
+        width: 600vh;
+        height: 160vh;
     }
 
     .imgContainer{
-        width: 200%;
+        width: 500vh;
     }
     
   }
