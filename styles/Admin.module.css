@@ -33,3 +33,21 @@
     left: 20px;
 }
 
+
+@media (max-width:767px){
+    .item{
+        width: 110vh;
+        padding: 10px;
+        height: 110vh;
+    }
+
+    .title{
+        text-align: center;
+    }
+
+    .listItem{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+}

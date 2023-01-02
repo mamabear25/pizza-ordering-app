@@ -10,7 +10,7 @@ const AdminOrders = () => {
 
     //  get products
     const getOrders = async () => {
-        const res = await axios.get("http://localhost:3000/api/orders");
+        const res = await axios.get("https://pizza-jgk6hlx9v-mamabear25.vercel.app/api/orders");
     
         setOrders(res.data);
     };
@@ -26,7 +26,7 @@ const AdminOrders = () => {
         const currentStatus = item.status
         
         try{
-            const res = await axios.put("http://localhost:3000/api/orders/" + id, {
+            const res = await axios.put("https://pizza-jgk6hlx9v-mamabear25.vercel.app/api/orders/" + id, {
                 status: currentStatus + 1,
             });
             setOrders([
@@ -78,7 +78,7 @@ const AdminOrders = () => {
 };
 
 export const getServerSideProps = async () => {
-    const productRes = await axios.get("http://localhost:3000/api/orders");
+    const productRes = await axios.get("https://pizza-jgk6hlx9v-mamabear25.vercel.app/api/orders");
   
     return {
       props: {

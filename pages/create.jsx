@@ -19,15 +19,15 @@ const CreateProducts = () => {
             {user["http://techmomma-fastfood.com/roles"].includes("Admin") &&(
             <>
             <h1 className={styles.title}>Create New Products Here</h1>
-            <div>
+            <div className={styles.listItem}>
                 {<AddPizzaButton setPizzaClose={setPizzaClose} />}
                 {!close && <AddPizza setPizzaClose={setPizzaClose} />}
             </div>
-            <div>
+            <div className={styles.listItem}>
                 {<AddBurgerButton setBurgerClose={setBurgerClose} />}
                 {!closeBurger && <AddBurger setBurgerClose={setBurgerClose} />}
             </div>
-            <div>
+            <div className={styles.listItem}>
                 {<AddDrinkButton setDrinkClose={setDrinkClose} />}
                 {!closeDrink && <AddDrink setDrinkClose={setDrinkClose} />}
             </div>
