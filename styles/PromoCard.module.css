@@ -40,6 +40,14 @@
     }
 
     .image{
-        width: 100%;
+        width: 70%;
+    }
+
+    .title{
+        font-size: 40px;
+    }
+
+    .desc{
+        font-size: 34px;
     }
   }

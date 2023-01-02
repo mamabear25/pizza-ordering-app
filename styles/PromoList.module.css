@@ -27,6 +27,11 @@
     }
 
     .wrapper {
-        width: 100%;
+        flex-direction: column;
+        width: 70%;
+    }
+
+    .desc{
+        font-size: 66px;
     }
   }
