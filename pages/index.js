@@ -10,7 +10,7 @@ export default function Home({ promoList }) {
       <Head>
         <title>Best Pizza Place in Lagos</title>
         <meta name="description" content="Best pizza shop in Lagos" />
-        <link rel="icon" href="/img/logo.png" />
+        <link rel="icon" href="/img/promo1.png" />
       </Head>
       <Featured />
       <PromoList promoList={promoList} />
