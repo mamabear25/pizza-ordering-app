@@ -133,3 +133,11 @@ transform-origin: left;
         padding: 0;
     }
 }
+
+
+/* laptop */
+@media (min-width: 1280px){
+    .container {
+      width: 100%;
+    }
+}

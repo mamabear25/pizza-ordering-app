@@ -50,4 +50,16 @@
     .desc{
         font-size: 34px;
     }
-  }
+}
+
+/* laptop */
+@media (min-width: 1280px){
+    .container {
+      width: 100%;
+      height: fit-content;
+    }
+
+    .image{
+        width: 80%;
+    }
+}

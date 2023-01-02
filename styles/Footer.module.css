@@ -47,4 +47,11 @@
       width: 110vh;
       height: 50vh;
     }
-  }
+}
+
+/* laptop */
+@media (min-width: 1280px){
+    .container {
+      width: 100%;
+    }
+}

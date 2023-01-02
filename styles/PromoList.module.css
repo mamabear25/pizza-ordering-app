@@ -34,4 +34,15 @@
     .desc{
         font-size: 66px;
     }
-  }
+}
+
+/* laptop */
+@media (min-width: 1280px){
+    .container {
+      width: 100%;
+    }
+
+    .desc{
+        height: 10vh;
+    }
+}
