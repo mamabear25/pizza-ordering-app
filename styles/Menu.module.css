@@ -163,7 +163,7 @@ animation: 2s counterclockwise infinite;
 
 @media (max-width:767px){
   .container {
-    width: 105vh;
+    width: 110vh;
     height: fit-content;
   }
 

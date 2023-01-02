@@ -110,3 +110,19 @@
     font-family: 'Fraunces', serif;
     cursor: pointer;
 }
+
+@media (max-width:767px){
+    .container{
+        width: 110vh;
+
+    }
+
+    .checkbox{
+        width: 50px;
+        height: 20px;
+    }
+
+    .button{
+        margin-top: 15px;
+    }
+}

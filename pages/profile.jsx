@@ -1,5 +1,4 @@
 import React from 'react';
-import { Row, Col } from 'reactstrap';
 import styles from "../styles/Profile.module.css";
 import { useUser, withPageAuthRequired } from '@auth0/nextjs-auth0/client';
 import Loading from '../components/Loading';
@@ -14,8 +13,8 @@ function Profile() {
     {user && (
       <>
       <div className={styles.container}>
-          <Row className="align-items-center profile-header mb-5 text-center text-md-left" data-testid="profile">
-            <Col md={2}>
+          <div>
+            <div>
               <Image
                 src={user.picture}
                 width="50" height="50"
@@ -25,11 +24,11 @@ function Profile() {
                 decode="async"
                 data-testid="profile-picture"
               />
-            </Col>
+            </div>
             <div>
             </div>
             <div>
-              <Col md>
+              <div>
                 <p className={styles.name} data-testid="profile-name">Welcome to your profile {user.nickname}</p>
                 <p className={styles.details}>Here are your details:</p>
                 <p className={styles.email}><b>Username: </b>{user.nickname}</p>
@@ -45,9 +44,9 @@ function Profile() {
                   </Link>
                   </>
                 )}
-              </Col>
+              </div>
             </div>
-          </Row>
+          </div>
           {/* <Row>
             <div>{JSON.stringify(user, null, 2)}</div>
           </Row> */}

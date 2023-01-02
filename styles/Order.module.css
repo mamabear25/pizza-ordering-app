@@ -83,3 +83,12 @@
     margin-top: 20px;
     
 }
+
+
+@media (max-width:767px){
+    .container{
+        width: 110vh;
+        height: 50vh;
+    }
+
+}

@@ -101,3 +101,10 @@
     color: teal;
     font-weight: bold;
 }
+
+@media (max-width:767px){
+    .container{
+        width: 110vh;
+
+    }
+}
