@@ -1,7 +1,7 @@
 import dbConnect from "../../../util/mongo";
 import Order from "../../../models/Order";
 
-const handler = async (req, res) => {
+export default async function handler (req, res) {
     const { method } = req;
 
     await dbConnect();
@@ -25,4 +25,3 @@ const handler = async (req, res) => {
     }
 }
 
-export default handler;

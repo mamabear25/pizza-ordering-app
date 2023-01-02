@@ -1,7 +1,7 @@
 import dbConnect from "../../../util/mongo";
 import Order from "../../../models/Order";
 
-const handler = async (req, res) => {
+export default async function handler (req, res) {
     const { 
         method,
         query: {id},
@@ -31,5 +31,3 @@ const handler = async (req, res) => {
 
     if(method === "DELETE"){}
 }
-
-export default handler;
