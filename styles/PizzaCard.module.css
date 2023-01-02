@@ -46,3 +46,10 @@ transform: scale(1.1);
         width: 50%;
     }
 }
+
+/* laptop */
+@media (min-width: 1280px){
+    .container {
+      width: 75%;
+    }
+  }

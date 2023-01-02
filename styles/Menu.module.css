@@ -185,3 +185,10 @@ animation: 2s counterclockwise infinite;
   
 }
 
+/* laptop */
+@media (min-width: 1280px){
+  .container {
+    height: fit-content;
+  }
+}
+
