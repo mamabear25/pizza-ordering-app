@@ -50,6 +50,6 @@ transform: scale(1.1);
 /* laptop */
 @media (min-width: 1280px){
     .container {
-      width: 35%;
+      width: 20%;
     }
   }
