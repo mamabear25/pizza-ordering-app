@@ -38,7 +38,7 @@
     .item{
         width: 110vh;
         padding: 10px;
-        height: 110vh;
+        height: fit-content;
     }
 
     .title{
