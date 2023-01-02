@@ -26,7 +26,7 @@ const Cart = () => {
     const createOrder = async (data) => {
         // here's our response after creating our order
         try{
-            const res = await axios.post("https://pizza-jgk6hlx9v-mamabear25.vercel.app/api/orders", data);
+            const res = await axios.post("https://pizza-app-omega.vercel.app/api/orders", data);
             if (res.status === 201) {
                 dispatch(reset());
                 router.push(`/orders/${res.data._id}`);
