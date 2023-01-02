@@ -1,4 +1,4 @@
-import styles from "../styles/Admin.module.css";
+import styles from "../styles/CheckOrder.module.css";
 import { useUser, withPageAuthRequired } from '@auth0/nextjs-auth0/client';
 import { useState} from "react";
 import AddPizzaButton from "../components/AddPizzaButton";
