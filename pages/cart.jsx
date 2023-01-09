@@ -98,70 +98,72 @@ const Cart = () => {
     return (
         <div>
             <div className={styles.container}>
-            {cart.total <= 0 ? (
-            <div className={styles.empty}>
-                <div className={styles.emptycontent}>
-                    <p className={styles.content}>Go grab something!,</p>
-                    <p>A Burger or A pizza.. they&apos;re all yummy!!</p>
-                </div>
-            </div>
-          ) : ( 
-            <>
-            <div className={styles.left}>
-                    <table className={styles.table}>
-                        <tbody>
-                            <tr className={styles.trTitle}>
-                                <th>Product</th>
-                                <th>Name</th>
-                                <th>Size</th>
-                                <th>Toppings</th>
-                                <th>Price</th>
-                                <th>Quantity</th>
-                                <th>Total</th>
-                            </tr>
-                        </tbody>
-                        <tbody>
-                            {cart.products.map((product) => (
-                                <tr className={styles.tr} key={product._id}>
-                                    <td>
-                                        <div className={styles.imgContainer}>
-                                            <Image src={product.img}
-                                                alt=""
-                                                layout="fill"
-                                                objectFit="cover" />
-                                        </div>
-                                    </td>
-                                    <td>
-                                        <span className={styles.name}>{product.title}</span>
-                                    </td>
-                                    <td>
-                                        <span className={styles.name}>{product.size === 0
-                                            ? "small"
-                                            : product.size === 1
-                                                ? "medium"
-                                                : "large"}
-                                        </span>
-                                    </td>
-                                    <td>
-                                        <span className={styles.extras}>
-                                            {product.extras.map((extra) => (
-                                                <span key={extra._id}>{extra.text} </span>
-                                            ))}</span>
-                                    </td>
-                                    <td>
-                                        <span className={styles.price}>{product.price}</span>
-                                    </td>
-                                    <td>
-                                        <span className={styles.quantity}>{product.quantity}</span>
-                                    </td>
-                                    <td>
-                                        <span className={styles.total}>{product.price * product.quantity}</span>
-                                    </td>
+            <div className={styles.divide}>
+                {cart.total <= 0 ? (
+                    <div className={styles.empty}>
+                        <div className={styles.emptycontent}>
+                            <p className={styles.content}>Go grab something!,</p>
+                            <p>A Burger or A pizza.. they&apos;re all yummy!!</p>
+                        </div>
+                    </div>
+                ) : (
+                    <>
+                    <div className={styles.left}>
+                        <table className={styles.table}>
+                            <tbody>
+                                <tr className={styles.trTitle}>
+                                    <th>Product</th>
+                                    <th>Name</th>
+                                    <th>Size</th>
+                                    <th>Toppings</th>
+                                    <th>Price</th>
+                                    <th>Quantity</th>
+                                    <th>Total</th>
                                 </tr>
-                            ))}
-                        </tbody>
-                    </table>
-                </div><div className={styles.right}>
+                            </tbody>
+                            <tbody>
+                                {cart.products.map((product) => (
+                                    <tr className={styles.tr} key={product._id}>
+                                        <td>
+                                            <div className={styles.imgContainer}>
+                                                <Image src={product.img}
+                                                    alt=""
+                                                    layout="fill"
+                                                    objectFit="cover" />
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <span className={styles.name}>{product.title}</span>
+                                        </td>
+                                        <td>
+                                            <span className={styles.name}>{product.size === 0
+                                                ? "small"
+                                                : product.size === 1
+                                                    ? "medium"
+                                                    : "large"}
+                                            </span>
+                                        </td>
+                                        <td>
+                                            <span className={styles.extras}>
+                                                {product.extras.map((extra) => (
+                                                    <span key={extra._id}>{extra.text} </span>
+                                                ))}</span>
+                                        </td>
+                                        <td>
+                                            <span className={styles.price}>{product.price}</span>
+                                        </td>
+                                        <td>
+                                            <span className={styles.quantity}>{product.quantity}</span>
+                                        </td>
+                                        <td>
+                                            <span className={styles.total}>{product.price * product.quantity}</span>
+                                        </td>
+                                    </tr>
+                                ))}
+                            </tbody>
+                        </table>
+                    </div>
+                    <div className={styles.right}>
                         <div className={styles.wrapper}>
                             <h2 className={styles.title}>CART TOTAL</h2>
                             <div className={styles.totaltext}>
@@ -200,10 +202,11 @@ const Cart = () => {
                     </div>
                     </>
                 )}  
-            {cash && <OrderDetail total={cart.total} createOrder={createOrder} />}
-        </div>
+                {cash && <OrderDetail total={cart.total} createOrder={createOrder} />}
+            </div>
+            </div>
         </div>
     )
-}
+};
 
 export default Cart;

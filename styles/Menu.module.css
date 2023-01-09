@@ -1,12 +1,11 @@
 .container{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .wrapper{
-  height: 100%;
+  height: 100vh;
 }
 
 .item{
@@ -44,7 +43,6 @@
 }
 
 .imgWrapper{
-    margin: 20px;
     background-color: rgb(21, 21, 21);
     display: flex;
     align-items: center;
@@ -164,7 +162,16 @@ animation: 2s counterclockwise infinite;
 @media (max-width:767px){
   .container {
     width: 100vh;
+    height: 190vh;
+
+  }
+
+  .wrapper{
     height: fit-content;
+  }
+
+  .item{
+    margin-top: 60px;
   }
 
   .menu{
@@ -173,7 +180,6 @@ animation: 2s counterclockwise infinite;
 
   .link{
     flex-direction: column;
-
   }
 
   /* .wrapper{

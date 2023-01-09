@@ -54,8 +54,8 @@
 
 @media (max-width:767px){
     .container{
-        padding-top: 10px;
-        width: 110vh;
+        margin-top: 400px;
+        width: 100vh;
     }
 
 }
