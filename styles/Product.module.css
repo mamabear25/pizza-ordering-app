@@ -1,10 +1,19 @@
 @import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,700&family=Josefin+Sans:wght@100;200;300;400&family=Lora:ital,wght@1,400;1,500;1,600&family=Playfair+Display:ital,wght@0,500;0,800;1,400&family=Varela&display=swap');
 
 .container{
-    height: calc(100vh - 100px);
+    margin-top: 50px;
+    height: 100vh;
     display: flex;
+    
 }
 
+.height{
+    height: 100vh;
+}
+
+.hagain{
+    height: 100vh;
+}
 .left{
     flex: 1;
     height: 100%;
@@ -15,6 +24,10 @@
 }
 
 .right{
+    width: 80%;
+    height: 100vh;
+    position: relative;
+    top: 100px;
     flex: 1;
     padding: 20px;
 }
@@ -51,7 +64,8 @@
 }
 
 .sizes{
-    width: 40%;
+    padding-top: 20px;
+    width: 30%;
     display: flex;
     justify-content: space-between;
 }
@@ -113,7 +127,7 @@
 
 @media (max-width:767px){
     .container{
-        width: 110vh;
+        width: 100vh;
 
     }
 

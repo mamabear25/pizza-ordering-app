@@ -40,6 +40,8 @@ const Product = ({ pizza }) => {
     };
 
     return (
+        <div className={styles.height}>
+        <div className={styles.hagain}>
         <div className={styles.container}>
             <div className={styles.left}>
                 <div className={styles.imgContainer}>
@@ -98,6 +100,8 @@ const Product = ({ pizza }) => {
                         </Link>
                     </div>
                 </div>
+            </div>
+            </div>
             </div>
         </div>
     );
