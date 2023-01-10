@@ -102,7 +102,7 @@ const Cart = () => {
                 {cart.total <= 0 ? (
                     <div className={styles.empty}>
                         <div className={styles.emptycontent}>
-                            <p className={styles.content}>It's pretty Empty here!</p>
+                            <p className={styles.content}>It&apos;s pretty Empty here!</p>
                             <p>Go grab a Cheesy pizza or Burger!,</p>
                         </div>
                     </div>
