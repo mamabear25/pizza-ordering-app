@@ -13,7 +13,7 @@ function Profile() {
     {user && (
       <>
       <div className={styles.container}>
-          <div>
+          <div className={styles.seccont}>
             <div>
               <Image
                 src={user.picture}
@@ -28,7 +28,7 @@ function Profile() {
             <div>
             </div>
             <div>
-              <div>
+              <div className={styles.info}>
                 <p className={styles.name} data-testid="profile-name">Welcome to your profile {user.nickname}</p>
                 <p className={styles.details}>Here are your details:</p>
                 <p className={styles.email}><b>Username: </b>{user.nickname}</p>

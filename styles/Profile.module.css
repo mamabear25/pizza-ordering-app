@@ -43,7 +43,26 @@
 
 @media (max-width:767px){
     .container {
-      width: 110vh;
-      height: 110vh;
+      width: 100vh;
+      height: 150vh;
+    }
+
+    .name{
+        font-size: 30px;
+    }
+    .details{
+        font-size: 30px;
+    }
+    .email{
+        font-size: 30px;
+    }
+
+    .listItem{
+        font-size: 26px;
+    }
+
+    .image{
+        width: 120px;
+        margin-bottom: 50px;
     }
 }

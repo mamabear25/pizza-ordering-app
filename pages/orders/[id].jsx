@@ -81,7 +81,7 @@ const Order = ({ order }) => {
                     <div className={styles.totaltext}>
                         <b className={styles.totaltextTitle}>Total:</b>&#8358;{order.total}
                     </div>
-                    <button disabled className={styles.button}>PAID</button>
+                    <button disabled className={styles.button}>PENDING</button>
                 </div>
             </div>
         </div>

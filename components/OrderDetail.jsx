@@ -12,9 +12,9 @@ const OrderDetail = ( { total, createOrder }) => {
     return (
         <div className={styles.container}>
             <div className={styles.wrapper}>
-                <h1 className={styles.title}>Delivery fee is &#8358;2500</h1>
+                <h1 className={styles.title}>DELIVERY FEE IS &#8358;2500</h1>
                 <div className={styles.item}>
-                    <label className={styles.label}>firstName Surname</label>
+                    <label className={styles.label}>Name</label>
                     <input 
                     placeholder="John Doe" 
                     type="text" 

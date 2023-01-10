@@ -54,7 +54,19 @@ transform: scale(1.2);
 
 @media (max-width:767px){
     .container{
-        width: 110vh;
-        height: 110vh;
+        width: 100vh;
+        height: 150vh;
     }
+
+    .wrapper{
+        margin-top: 40px;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .dir{
+        margin-top: 60px;
+
+    }
+    
 }

@@ -36,9 +36,9 @@
 
 @media (max-width:767px){
     .item{
-        width: 110vh;
+        width: 100vh;
         padding: 10px;
-        height: 110vh;;
+        height: 150vh;;
     }
 
     .title{
